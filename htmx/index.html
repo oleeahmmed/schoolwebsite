@@ -2001,14 +2001,19 @@
             </ul>
           </div>
         </div>
-        <div class="pt-8 mt-8 border-t border-neutral-100 dark:border-neutral-700 text-center scroll-reveal stagger-6">
-          <p class="text-neutral-500 dark:text-neutral-400 text-sm">
-            <span class="lang-content active" data-lang="bn">© ২০২৫ আদর্শ উচ্চ বিদ্যালয়। সর্বস্বত্ব সংরক্ষিত।</span>
-            <span class="lang-content" data-lang="en">© 2025 Adarsha High School. All rights reserved.</span>
-          </p>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-neutral-500 dark:text-neutral-400 text-sm">
+          <span class="lang-content active" data-lang="bn">© ২০২৫ আদর্শ উচ্চ বিদ্যালয়। সর্বস্বত্ব সংরক্ষিত।</span>
+          <span class="lang-content" data-lang="en">© 2025 Adarsha High School. All rights reserved.</span>
+        </p>
+        <p class="text-neutral-500 dark:text-neutral-400 text-xs mt-1">
+          <span class="lang-content active" data-lang="bn">ডেভেলপ করেছেন: <a href="https://ezydream.com/" target="_blank" class="hover:underline">ইজিড্রিম লিমিটেড</a></span>
+          <span class="lang-content" data-lang="en">Developed by: <a href="https://ezydream.com/" target="_blank" class="hover:underline">Ezydream Limited</a></span>
+        </p>
+      </div>
       </div>
     </div>
+    
   </footer>
 
   <script>
@@ -2033,177 +2038,378 @@
     function showHome() {
       const mainContent = document.getElementById('main-content');
       mainContent.innerHTML = `
-        <!-- Default Home Content -->
-        <section id="home" class="relative overflow-hidden bg-gradient-to-br from-white to-gray-50 dark:from-zinc-900 dark:to-neutral-900 py-20 md:py-28 lg:py-36 min-h-[calc(100vh-theme(spacing.14))] flex items-center transition-colors duration-300">
-          <!-- Background Elements with Parallax Effect -->
-          <div class="absolute inset-0 z-0 parallax-bg" style="background-image: url('https://source.unsplash.com/1600x900/?school-building,library'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-black opacity-10 dark:opacity-30"></div>
-            <!-- Subtle gradient overlay for premium look -->
-            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-zinc-900 dark:via-transparent dark:to-transparent"></div>
+           <!-- Default Home Content -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-br from-white to-gray-50 dark:from-zinc-900 dark:to-neutral-900 py-20 md:py-28 lg:py-36 min-h-[calc(100vh-theme(spacing.14))] flex items-center transition-colors duration-300">
+      <!-- Background Elements with Parallax Effect -->
+      <div class="absolute inset-0 z-0 parallax-bg" style="background-image: url('https://source.unsplash.com/1600x900/?school-building,library'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black opacity-10 dark:opacity-30"></div>
+        <!-- Subtle gradient overlay for premium look -->
+        <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-zinc-900 dark:via-transparent dark:to-transparent"></div>
+      </div>
+
+      <div class="absolute inset-0 z-0">
+        <!-- Grid pattern overlay -->
+        <svg class="absolute inset-0 h-full w-full stroke-gray-200 dark:stroke-neutral-800 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+          <defs>
+            <pattern id="grid-pattern-hero" width="20" height="20" x="50%" y="0%" patternUnits="userSpaceOnUse">
+              <path d="M0 20L20 0ZM0 0L20 20Z" fill="none" stroke-width="0.5"></path>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" stroke-width="0" fill="url(#grid-pattern-hero)"></rect>
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10 w-full">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <!-- Left Content Area -->
+          <div class="lg:w-1/2 text-center lg:text-left scroll-reveal">
+            <p class="text-lg sm:text-xl font-medium text-black dark:text-white mb-4 scroll-reveal-left stagger-1">
+              <span class="lang-content active" data-lang="bn">আমাদের বিদ্যালয়ে স্বাগতম!</span>
+              <span class="lang-content" data-lang="en">Welcome to Our School!</span>
+            </p>
+            <h1 class="hero-title text-black dark:text-white font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 tracking-tight gradient-text scroll-reveal-left stagger-2">
+              <span class="lang-content active" data-lang="bn">আদর্শ শিক্ষা, উজ্জ্বল ভবিষ্যৎ।</span>
+              <span class="lang-content" data-lang="en">Ideal Education, Bright Future.</span>
+            </h1>
+            <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl lg:max-w-none mx-auto lg:mx-0 scroll-reveal-left stagger-3">
+              <span class="lang-content active" data-lang="bn">আদর্শ উচ্চ বিদ্যালয় একটি ঐতিহ্যবাহী প্রতিষ্ঠান যা শিক্ষার্থীদের জ্ঞান, নৈতিকতা এবং সৃজনশীলতার বিকাশে প্রতিশ্রুতিবদ্ধ।</span>
+              <span class="lang-content" data-lang="en">Adarsha High School is a traditional institution committed to fostering knowledge, ethics, and creativity in students.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 scroll-reveal-left stagger-4">
+              <button hx-get="about.html" hx-target="#main-content" hx-swap="innerHTML" hx-indicator=".htmx-indicator" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-black hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 btn-enhanced magnetic">
+                <span class="lang-content active" data-lang="bn">আমাদের সম্পর্কে জানুন</span>
+                <span class="lang-content" data-lang="en">Learn More About Us</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
+              <button hx-get="contacts.html" hx-target="#main-content" hx-swap="innerHTML" hx-indicator=".htmx-indicator" class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-neutral-600 text-base font-medium rounded-full shadow-sm text-black dark:text-white bg-white dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-all duration-300 transform hover:scale-105 btn-enhanced magnetic">
+                <span class="lang-content active" data-lang="bn">যোগাযোগ করুন</span>
+                <span class="lang-content" data-lang="en">Contact Us</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <div class="absolute inset-0 z-0">
-            <!-- Grid pattern overlay -->
-            <svg class="absolute inset-0 h-full w-full stroke-gray-200 dark:stroke-neutral-800 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
-              <defs>
-                <pattern id="grid-pattern-hero" width="20" height="20" x="50%" y="0%" patternUnits="userSpaceOnUse">
-                  <path d="M0 20L20 0ZM0 0L20 20Z" fill="none" stroke-width="0.5"></path>
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" stroke-width="0" fill="url(#grid-pattern-hero)"></rect>
+          <!-- Right Image Carousel Area -->
+          <div class="lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0 carousel-container relative w-full max-w-xl lg:max-w-2xl h-80 sm:h-96 md:h-[400px] lg:h-[500px] rounded-3xl shadow-2xl border border-gray-200 dark:border-neutral-700 overflow-hidden scroll-reveal-right stagger-5 tilt-card">
+            <div class="carousel-slides absolute inset-0 flex transition-transform duration-700 ease-in-out">
+              <!-- Slide 1 -->
+              <div class="carousel-slide flex-shrink-0 w-full h-full relative">
+                <img class="w-full h-full object-cover" 
+                     src="https://source.unsplash.com/800x600/?happy-students,classroom" 
+                     alt="Students in classroom"
+                     onerror="this.onerror=null;this.src='https://www.drmc.edu.bd/Uploads/DRMC/homepagebanner/1b52dd0f-b4cf-4411-b3d2-ab1f17add9ce2.jpg';"
+                >
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6">
+                  <p class="text-white text-lg sm:text-xl font-semibold backdrop-blur-sm bg-black bg-opacity-40 p-3 rounded-lg">
+                    <span class="lang-content active" data-lang="bn">শিক্ষার্থীরা শ্রেণীকক্ষে শিখছে।</span>
+                    <span class="lang-content" data-lang="en">Students learning in the classroom.</span>
+                  </p>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="carousel-slide flex-shrink-0 w-full h-full relative">
+                <img class="w-full h-full object-cover" 
+                     src="https://source.unsplash.com/800x600/?school-library,books" 
+                     alt="School Library"
+                     onerror="this.onerror=null;this.src='https://www.drmc.edu.bd/Uploads/DRMC/galleryimages/7f5f6bbe-dba9-4aad-bf22-9b0ea40d5c3bIMG_9997.JPG';"
+                >
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6">
+                  <p class="text-white text-lg sm:text-xl font-semibold backdrop-blur-sm bg-black bg-opacity-40 p-3 rounded-lg">
+                    <span class="lang-content active" data-lang="bn">আমাদের সমৃদ্ধ গ্রন্থাগার।</span>
+                    <span class="lang-content" data-lang="en">Our rich school library.</span>
+                  </p>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="carousel-slide flex-shrink-0 w-full h-full relative">
+                <img class="w-full h-full object-cover" 
+                     src="https://source.unsplash.com/800x600/?school-playground,kids-playing" 
+                     alt="Kids playing in playground"
+                     onerror="this.onerror=null;this.src='https://www.drmc.edu.bd/Uploads/DRMC/homepagebanner/1b52dd0f-b4cf-4411-b3d2-ab1f17add9ce2.jpg';"
+                >
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6">
+                  <p class="text-white text-lg sm:text-xl font-semibold backdrop-blur-sm bg-black bg-opacity-40 p-3 rounded-lg">
+                    <span class="lang-content active" data-lang="bn">খেলার মাঠে আনন্দ।</span>
+                    <span class="lang-content" data-lang="en">Joy on the playground.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel Navigation Dots -->
+            <div class="carousel-dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+              <button class="dot w-3 h-3 bg-white rounded-full opacity-50 focus:outline-none transition-opacity duration-300"></button>
+              <button class="dot w-3 h-3 bg-white rounded-full opacity-50 focus:outline-none transition-opacity duration-300"></button>
+              <button class="dot w-3 h-3 bg-white rounded-full opacity-50 focus:outline-none transition-opacity duration-300"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Stats/Highlights Section -->
+        <div class="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 justify-items-center">
+          <!-- Stat 1: Students -->
+          <div class="w-full max-w-xs bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 flex items-center space-x-4 scroll-reveal-scale stagger-1 tilt-card">
+            <div class="flex-shrink-0 w-14 h-14 bg-gray-100 dark:bg-zinc-900 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-black dark:text-white counter" data-target="2000">
+                <span class="lang-content active" data-lang="bn">০+</span>
+                <span class="lang-content" data-lang="en">0+</span>
+              </p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                <span class="lang-content active" data-lang="bn">শিক্ষার্থী</span>
+                <span class="lang-content" data-lang="en">Students</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Stat 2: Teachers -->
+          <div class="w-full max-w-xs bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 flex items-center space-x-4 scroll-reveal-scale stagger-2 tilt-card">
+            <div class="flex-shrink-0 w-14 h-14 bg-gray-100 dark:bg-zinc-900 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-black dark:text-white counter" data-target="50">
+                <span class="lang-content active" data-lang="bn">০+</span>
+                <span class="lang-content" data-lang="en">0+</span>
+              </p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                <span class="lang-content active" data-lang="bn">শিক্ষক</span>
+                <span class="lang-content" data-lang="en">Teachers</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Stat 3: Years of Excellence -->
+          <div class="w-full max-w-xs bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 flex items-center space-x-4 scroll-reveal-scale stagger-3 tilt-card">
+            <div class="flex-shrink-0 w-14 h-14 bg-gray-100 dark:bg-zinc-900 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-black dark:text-white counter" data-target="35">
+                <span class="lang-content active" data-lang="bn">০+</span>
+                <span class="lang-content" data-lang="en">0+</span>
+              </p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                <span class="lang-content active" data-lang="bn">বছরের শ্রেষ্ঠত্ব</span>
+                <span class="lang-content" data-lang="en">Years of Excellence</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section with Enhanced Animations -->
+    <section id="why-choose-us" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white dark:bg-zinc-900 transition-colors duration-300">
+      <div class="max-w-6xl mx-auto text-center">
+
+        <!-- Section Header -->
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 leading-tight scroll-reveal gradient-text">
+          <span class="lang-content active" data-lang="bn" lang="bn">আমাদের কেন বেছে নেবেন?</span>
+          <span class="lang-content" data-lang="en" lang="en">Why Choose Us?</span>
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-12 scroll-reveal stagger-1">
+          <span class="lang-content active" data-lang="bn" lang="bn">আমাদের সম্প্রদায় কেন আপনার বৃদ্ধি, শেখা এবং সাফল্যের জন্য উপযুক্ত, তা আবিষ্কার করুন।</span>
+          <span class="lang-content" data-lang="en" lang="en">Discover the reasons why our community is the perfect place for growth, learning, and success.</span>
+        </p>
+
+        <!-- Benefits Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Benefit Card 1: Expert Faculty -->
+          <div class="bg-gray-50 dark:bg-zinc-800 p-8 rounded-2xl shadow-xl hover-glow transition-all duration-300 transform group scroll-reveal-scale stagger-1 tilt-card">
+            <div class="flex justify-center items-center mb-6">
+              <svg class="w-16 h-16 text-blue-500 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 16.5v2.25m0 3.75v-2.25m0-3.75A2.25 2.25 0 0013.75 12h-2.5a2.25 2.25 0 00-2.25 2.25v1.25m5 0h-5m0 0a2 2 0 100 4 2 2 0 000-4zM10.25 8h2.5a2.25 2.25 0 002.25-2.25V4.25A2.25 2.25 0 0012.75 2h-1.25a2.25 2.25 0 00-2.25 2.25V5.75A2.25 2.25 0 0010.25 8z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <span class="lang-content active" data-lang="bn" lang="bn">বিশেষজ্ঞ শিক্ষকমণ্ডলী</span>
+              <span class="lang-content" data-lang="en" lang="en">Expert Faculty</span>
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              <span class="lang-content active" data-lang="bn" lang="bn">আমাদের অভিজ্ঞ এবং নিবেদিত শিক্ষকমণ্ডলী প্রতিটি শিক্ষার্থীর জন্য উচ্চ মানের, আকর্ষণীয় এবং ব্যক্তিগতকৃত শিক্ষাদান নিশ্চিত করতে প্রতিশ্রুতিবদ্ধ।</span>
+              <span class="lang-content" data-lang="en" lang="en">Our experienced and dedicated educators are committed to providing a high-quality, engaging, and personalized learning experience for every student.</span>
+            </p>
+          </div>
+
+          <!-- Benefit Card 2: Modern Facilities -->
+          <div class="bg-gray-50 dark:bg-zinc-800 p-8 rounded-2xl shadow-xl hover-glow transition-all duration-300 transform group scroll-reveal-scale stagger-2 tilt-card">
+            <div class="flex justify-center items-center mb-6">
+              <svg class="w-16 h-16 text-green-500 group-hover:text-green-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.5v8m-3-4h6m-1-1v4m-1-2h4M12 4a8 8 0 100 16 8 8 0 000-16z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <span class="lang-content active" data-lang="bn" lang="bn">আধুনিক সুবিধা</span>
+              <span class="lang-content" data-lang="en" lang="en">Modern Facilities</span>
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              <span class="lang-content active" data-lang="bn" lang="bn">আমরা আধুনিক শ্রেণীকক্ষ, উন্নত গবেষণাগার এবং একটি সমৃদ্ধ গ্রন্থাগার সহ একটি অত্যাধুনিক শিক্ষাদান পরিবেশ প্রদান করি, যা একাডেমিক শ্রেষ্ঠত্বকে সমর্থন করে।</span>
+              <span class="lang-content" data-lang="en" lang="en">We provide a state-of-the-art learning environment with modern classrooms, advanced laboratories, and a well-stocked library to support academic excellence.</span>
+            </p>
+          </div>
+
+          <!-- Benefit Card 3: Holistic Development -->
+          <div class="bg-gray-50 dark:bg-zinc-800 p-8 rounded-2xl shadow-xl hover-glow transition-all duration-300 transform group scroll-reveal-scale stagger-3 tilt-card">
+            <div class="flex justify-center items-center mb-6">
+              <svg class="w-16 h-16 text-purple-500 group-hover:text-purple-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15.5h2M12 17.5v-4M10 20.5a8 8 0 100-16 8 8 0 000 16z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <span class="lang-content active" data-lang="bn" lang="bn">সামগ্রিক উন্নয়ন</span>
+              <span class="lang-content" data-lang="en" lang="en">Holistic Development</span>
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              <span class="lang-content active" data-lang="bn" lang="bn">শিক্ষার পাশাপাশি, আমরা বিভিন্ন সহপাঠ্যক্রমিক কার্যকলাপ, খেলাধুলা এবং সমাজসেবার মাধ্যমে প্রতিটি শিক্ষার্থীর প্রতিভাকে বিকশিত করার উপর গুরুত্ব দিই।</span>
+              <span class="lang-content" data-lang="en" lang="en">Beyond academics, we focus on nurturing every student's talents through a wide range of extracurricular activities, sports, and community service.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slim, Rich Section Divider -->
+    <div class="my-4 md:my-6 w-full px-4">
+      <div class="relative flex items-center justify-center">
+        <div class="flex-grow h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-zinc-700 to-transparent transition-colors duration-300"></div>
+        <div class="h-2 w-2 rounded-full bg-gray-400 dark:bg-zinc-600 mx-2 flex-shrink-0 transition-colors duration-300 animate-pulse"></div>
+        <div class="flex-grow h-px bg-gradient-to-l from-transparent via-gray-300 dark:via-zinc-700 to-transparent transition-colors duration-300"></div>
+      </div>
+    </div>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta" class="py-16 md:py-24 bg-gradient-to-br from-white to-gray-50 dark:from-zinc-900 dark:to-neutral-900 transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 text-center">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center max-w-3xl mx-auto mb-12 md:mb-16 scroll-reveal">
+          <div class="mb-3 scroll-reveal-scale stagger-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
+          <h3 class="text-black dark:text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight mb-2 gradient-text scroll-reveal stagger-2">
+            <span class="lang-content active" data-lang="bn">আমাদের সাথে যোগ দিতে প্রস্তুত?</span>
+            <span class="lang-content" data-lang="en">Ready to Join Us?</span>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 text-lg sm:text-xl md:text-2xl font-normal leading-relaxed mb-4 scroll-reveal stagger-3">
+            <span class="lang-content active" data-lang="bn">আপনার সন্তানের উজ্জ্বল ভবিষ্যৎ গঠনে আমাদের অংশীদার হতে আবেদন করুন।</span>
+            <span class="lang-content" data-lang="en">Take the next step towards your child's bright future.</span>
+          </p>
+          <div class="w-24 h-1 bg-black dark:bg-white rounded-full scroll-reveal stagger-4"></div>
+        </div>
 
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10 w-full">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-              <!-- Left Content Area -->
-              <div class="lg:w-1/2 text-center lg:text-left scroll-reveal">
-                <p class="text-lg sm:text-xl font-medium text-black dark:text-white mb-4 scroll-reveal-left stagger-1">
-                  <span class="lang-content active" data-lang="bn">আমাদের বিদ্যালয়ে স্বাগতম!</span>
-                  <span class="lang-content" data-lang="en">Welcome to Our School!</span>
-                </p>
-                <h1 class="hero-title text-black dark:text-white font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 tracking-tight gradient-text scroll-reveal-left stagger-2">
-                  <span class="lang-content active" data-lang="bn">আদর্শ শিক্ষা, উজ্জ্বল ভবিষ্যৎ।</span>
-                  <span class="lang-content" data-lang="en">Ideal Education, Bright Future.</span>
-                </h1>
-                <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl lg:max-w-none mx-auto lg:mx-0 scroll-reveal-left stagger-3">
-                  <span class="lang-content active" data-lang="bn">আদর্শ উচ্চ বিদ্যালয় একটি ঐতিহ্যবাহী প্রতিষ্ঠান যা শিক্ষার্থীদের জ্ঞান, নৈতিকতা এবং সৃজনশীলতার বিকাশে প্রতিশ্রুতিবদ্ধ।</span>
-                  <span class="lang-content" data-lang="en">Adarsha High School is a traditional institution committed to fostering knowledge, ethics, and creativity in students.</span>
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 scroll-reveal-left stagger-4">
-                  <button hx-get="about.html" hx-target="#main-content" hx-swap="innerHTML" hx-indicator=".htmx-indicator" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-black hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 btn-enhanced magnetic">
-                    <span class="lang-content active" data-lang="bn">আমাদের সম্পর্কে জানুন</span>
-                    <span class="lang-content" data-lang="en">Learn More About Us</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </button>
-                  <button hx-get="contacts.html" hx-target="#main-content" hx-swap="innerHTML" hx-indicator=".htmx-indicator" class="inline-flex items-center justify-center px-8 py-3 border border-gray-300 dark:border-neutral-600 text-base font-medium rounded-full shadow-sm text-black dark:text-white bg-white dark:bg-neutral-800 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-all duration-300 transform hover:scale-105 btn-enhanced magnetic">
-                    <span class="lang-content active" data-lang="bn">যোগাযোগ করুন</span>
-                    <span class="lang-content" data-lang="en">Contact Us</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </button>
-                </div>
+        <!-- CTA Button -->
+        <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-black hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 btn-enhanced magnetic scroll-reveal stagger-5">
+          <span class="lang-content active" data-lang="bn">এখনই আবেদন করুন</span>
+          <span class="lang-content" data-lang="en">Apply Now</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Slim, Rich Section Divider -->
+    <div class="my-4 md:my-6 w-full px-4">
+      <div class="relative flex items-center justify-center">
+        <div class="flex-grow h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-zinc-700 to-transparent transition-colors duration-300"></div>
+        <div class="h-2 w-2 rounded-full bg-gray-400 dark:bg-zinc-600 mx-2 flex-shrink-0 transition-colors duration-300 animate-pulse"></div>
+        <div class="flex-grow h-px bg-gradient-to-l from-transparent via-gray-300 dark:via-zinc-700 to-transparent transition-colors duration-300"></div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-gradient-to-br from-white to-gray-50 dark:from-zinc-900 dark:to-neutral-900 transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 text-center">
+        <!-- Section Header -->
+        <div class="flex flex-col items-center max-w-3xl mx-auto mb-12 md:mb-16 scroll-reveal">
+          <div class="mb-3 scroll-reveal-scale stagger-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-black dark:text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight mb-2 gradient-text scroll-reveal stagger-2">
+            <span class="lang-content active" data-lang="bn">আমাদের সম্পর্কে কিছু কথা</span>
+            <span class="lang-content" data-lang="en">What Our Community Says</span>
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 text-lg sm:text-xl md:text-2xl font-normal leading-relaxed mb-4 scroll-reveal stagger-3">
+            <span class="lang-content active" data-lang="bn">আমাদের শিক্ষার্থী, অভিভাবক এবং প্রাক্তন শিক্ষার্থীদের মতামত শুনুন।</span>
+            <span class="lang-content" data-lang="en">Hear from our students, parents, and alumni.</span>
+          </p>
+          <div class="w-24 h-1 bg-black dark:bg-white rounded-full scroll-reveal stagger-4"></div>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial Card 1 -->
+          <div class="relative flex flex-col items-center w-full scroll-reveal-scale stagger-1">
+            <div class="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 w-full text-center tilt-card">
+              <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4 italic">
+                <span class="lang-content active" data-lang="bn">"আদর্শ উচ্চ বিদ্যালয় শুধু একটি স্কুল নয়, এটি একটি পরিবার। এখানকার শিক্ষকরা অসাধারণ এবং তারা আমাদের সব দিক থেকে সহায়তা করেন।"</span>
+                <span class="lang-content" data-lang="en">"Adarsha High School is not just a school, it's a family. The teachers are amazing and they support us in every way."</span>
+              </p>
+              <div class="font-bold text-black dark:text-white text-lg">
+                <span class="lang-content active" data-lang="bn">নুরুল ইসলাম</span>
+                <span class="lang-content" data-lang="en">Nurul Islam</span>
               </div>
-
-              <!-- Right Image Carousel Area -->
-              <div class="lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0 carousel-container relative w-full max-w-xl lg:max-w-2xl h-80 sm:h-96 md:h-[400px] lg:h-[500px] rounded-3xl shadow-2xl border border-gray-200 dark:border-neutral-700 overflow-hidden scroll-reveal-right stagger-5 tilt-card">
-                <div class="carousel-slides absolute inset-0 flex transition-transform duration-700 ease-in-out">
-                  <!-- Slide 1 -->
-                  <div class="carousel-slide flex-shrink-0 w-full h-full relative">
-                    <img class="w-full h-full object-cover" 
-                         src="https://source.unsplash.com/800x600/?happy-students,classroom" 
-                         alt="Students in classroom"
-                         onerror="this.onerror=null;this.src='https://www.drmc.edu.bd/Uploads/DRMC/homepagebanner/1b52dd0f-b4cf-4411-b3d2-ab1f17add9ce2.jpg';"
-                    >
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6">
-                      <p class="text-white text-lg sm:text-xl font-semibold backdrop-blur-sm bg-black bg-opacity-40 p-3 rounded-lg">
-                        <span class="lang-content active" data-lang="bn">শিক্ষার্থীরা শ্রেণীকক্ষে শিখছে।</span>
-                        <span class="lang-content" data-lang="en">Students learning in the classroom.</span>
-                      </p>
-                    </div>
-                  </div>
-                  <!-- Slide 2 -->
-                  <div class="carousel-slide flex-shrink-0 w-full h-full relative">
-                    <img class="w-full h-full object-cover" 
-                         src="https://source.unsplash.com/800x600/?school-library,books" 
-                         alt="School Library"
-                         onerror="this.onerror=null;this.src='https://www.drmc.edu.bd/Uploads/DRMC/galleryimages/7f5f6bbe-dba9-4aad-bf22-9b0ea40d5c3bIMG_9997.JPG';"
-                    >
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6">
-                      <p class="text-white text-lg sm:text-xl font-semibold backdrop-blur-sm bg-black bg-opacity-40 p-3 rounded-lg">
-                        <span class="lang-content active" data-lang="bn">আমাদের সমৃদ্ধ গ্রন্থাগার।</span>
-                        <span class="lang-content" data-lang="en">Our rich school library.</span>
-                      </p>
-                    </div>
-                  </div>
-                  <!-- Slide 3 -->
-                  <div class="carousel-slide flex-shrink-0 w-full h-full relative">
-                    <img class="w-full h-full object-cover" 
-                         src="https://source.unsplash.com/800x600/?school-playground,kids-playing" 
-                         alt="Kids playing in playground"
-                         onerror="this.onerror=null;this.src='https://www.drmc.edu.bd/Uploads/DRMC/homepagebanner/1b52dd0f-b4cf-4411-b3d2-ab1f17add9ce2.jpg';"
-                    >
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-6">
-                      <p class="text-white text-lg sm:text-xl font-semibold backdrop-blur-sm bg-black bg-opacity-40 p-3 rounded-lg">
-                        <span class="lang-content active" data-lang="bn">খেলার মাঠে আনন্দ।</span>
-                        <span class="lang-content" data-lang="en">Joy on the playground.</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Carousel Navigation Dots -->
-                <div class="carousel-dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-                  <button class="dot w-3 h-3 bg-white rounded-full opacity-50 focus:outline-none transition-opacity duration-300"></button>
-                  <button class="dot w-3 h-3 bg-white rounded-full opacity-50 focus:outline-none transition-opacity duration-300"></button>
-                  <button class="dot w-3 h-3 bg-white rounded-full opacity-50 focus:outline-none transition-opacity duration-300"></button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Floating Stats/Highlights Section -->
-            <div class="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 justify-items-center">
-              <!-- Stat 1: Students -->
-              <div class="w-full max-w-xs bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 flex items-center space-x-4 scroll-reveal-scale stagger-1 tilt-card">
-                <div class="flex-shrink-0 w-14 h-14 bg-gray-100 dark:bg-zinc-900 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-3xl font-bold text-black dark:text-white counter" data-target="2000">
-                    <span class="lang-content active" data-lang="bn">০+</span>
-                    <span class="lang-content" data-lang="en">0+</span>
-                  </p>
-                  <p class="text-gray-600 dark:text-gray-300 text-sm">
-                    <span class="lang-content active" data-lang="bn">শিক্ষার্থী</span>
-                    <span class="lang-content" data-lang="en">Students</span>
-                  </p>
-                </div>
-              </div>
-
-              <!-- Stat 2: Teachers -->
-              <div class="w-full max-w-xs bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 flex items-center space-x-4 scroll-reveal-scale stagger-2 tilt-card">
-                <div class="flex-shrink-0 w-14 h-14 bg-gray-100 dark:bg-zinc-900 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-3xl font-bold text-black dark:text-white counter" data-target="50">
-                    <span class="lang-content active" data-lang="bn">০+</span>
-                    <span class="lang-content" data-lang="en">0+</span>
-                  </p>
-                  <p class="text-gray-600 dark:text-gray-300 text-sm">
-                    <span class="lang-content active" data-lang="bn">শিক্ষক</span>
-                    <span class="lang-content" data-lang="en">Teachers</span>
-                  </p>
-                </div>
-              </div>
-
-              <!-- Stat 3: Years of Excellence -->
-              <div class="w-full max-w-xs bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 flex items-center space-x-4 scroll-reveal-scale stagger-3 tilt-card">
-                <div class="flex-shrink-0 w-14 h-14 bg-gray-100 dark:bg-zinc-900 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-3xl font-bold text-black dark:text-white counter" data-target="35">
-                    <span class="lang-content active" data-lang="bn">০+</span>
-                    <span class="lang-content" data-lang="en">0+</span>
-                  </p>
-                  <p class="text-gray-600 dark:text-gray-300 text-sm">
-                    <span class="lang-content active" data-lang="bn">বছরের শ্রেষ্ঠত্ব</span>
-                    <span class="lang-content" data-lang="en">Years of Excellence</span>
-                  </p>
-                </div>
+              <div class="text-gray-500 dark:text-gray-400 text-sm">
+                <span class="lang-content active" data-lang="bn">শিক্ষার্থী, দশম শ্রেণি</span>
+                <span class="lang-content" data-lang="en">Student, Grade 10</span>
               </div>
             </div>
           </div>
-        </section>
+          
+          <!-- Testimonial Card 2 -->
+          <div class="relative flex flex-col items-center w-full scroll-reveal-scale stagger-2">
+            <div class="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 w-full text-center tilt-card">
+              <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4 italic">
+                <span class="lang-content active" data-lang="bn">"আমার সন্তান এখানে পড়ে আমি খুবই খুশি। শিক্ষার মান খুবই উন্নত এবং শিক্ষকরা খুবই যত্নশীল।"</span>
+                <span class="lang-content" data-lang="en">"I am very happy that my child studies here. The quality of education is excellent and the teachers are very caring."</span>
+              </p>
+              <div class="font-bold text-black dark:text-white text-lg">
+                <span class="lang-content active" data-lang="bn">শারমিন আক্তার</span>
+                <span class="lang-content" data-lang="en">Sharmin Akter</span>
+              </div>
+              <div class="text-gray-500 dark:text-gray-400 text-sm">
+                <span class="lang-content active" data-lang="bn">অভিভাবক</span>
+                <span class="lang-content" data-lang="en">Parent</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Card 3 -->
+          <div class="relative flex flex-col items-center w-full scroll-reveal-scale stagger-3">
+            <div class="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg hover-glow transition-all duration-300 w-full text-center tilt-card">
+              <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4 italic">
+                <span class="lang-content active" data-lang="bn">"এই স্কুল আমাকে ভবিষ্যতের জন্য প্রস্তুত করেছে। শিক্ষকরা শুধু পড়ান না, তারা আমাদের জীবন গড়তে সাহায্য করেন।"</span>
+                <span class="lang-content" data-lang="en">"This school prepared me for the future. The teachers don't just teach, they help us build our lives."</span>
+              </p>
+              <div class="font-bold text-black dark:text-white text-lg">
+                <span class="lang-content active" data-lang="bn">রাজু আহমেদ</span>
+                <span class="lang-content" data-lang="en">Raju Ahmed</span>
+              </div>
+              <div class="text-gray-500 dark:text-gray-400 text-sm">
+                <span class="lang-content active" data-lang="bn">প্রাক্তন শিক্ষার্থী</span>
+                <span class="lang-content" data-lang="en">Alumnus</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
       `;
       
       // Re-initialize animations and carousel
