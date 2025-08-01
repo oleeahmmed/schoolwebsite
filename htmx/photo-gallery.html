@@ -1,0 +1,379 @@
+<section id="photo-gallery" class="relative overflow-hidden py-16 md:py-24 bg-white dark:bg-zinc-900 transition-colors duration-300">
+  <!-- Background Elements with Parallax Effect -->
+  <div class="absolute inset-0 z-0 parallax-bg" style="background-image: url('https://source.unsplash.com/random/1920x1080/?school-photography,camera-lens'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-black opacity-10 dark:opacity-30"></div>
+    <!-- Subtle gradient overlay for premium look -->
+    <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-zinc-900 dark:via-transparent dark:to-transparent"></div>
+  </div>
+
+  <div class="absolute inset-0 z-0">
+    <!-- Grid pattern overlay -->
+    <svg class="absolute inset-0 h-full w-full stroke-gray-200 dark:stroke-neutral-800 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+      <defs>
+        <pattern id="grid-pattern-gallery" width="20" height="20" x="50%" y="0%" patternUnits="userSpaceOnUse">
+          <path d="M0 20L20 0ZM0 0L20 20Z" fill="none" stroke-width="0.5"></path>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" stroke-width="0" fill="url(#grid-pattern-gallery)"></rect>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 md:mb-16 animate-fade-in">
+      <div class="mb-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <h3 class="text-black dark:text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight mb-2">
+        <span class="lang-content active" data-lang="bn">ফটো গ্যালারি</span>
+        <span class="lang-content" data-lang="en">Photo Gallery</span>
+      </h3>
+      <p class="text-gray-600 dark:text-gray-400 text-lg sm:text-xl md:text-2xl font-normal leading-relaxed mb-4">
+        <span class="lang-content active" data-lang="bn">আমাদের বিদ্যালয়ের বিভিন্ন কার্যক্রম ও অনুষ্ঠানের স্মৃতিময় মুহূর্তসমূহ।</span>
+        <span class="lang-content" data-lang="en">Memorable moments from various activities and events of our school.</span>
+      </p>
+      <div class="w-24 h-1 bg-black dark:bg-white rounded-full animate-pulse"></div>
+    </div>
+
+    <!-- Gallery Filter Tabs -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12 md:mb-16">
+      <button class="gallery-filter-btn active px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 bg-black text-white dark:bg-white dark:text-black" data-filter="all">
+        <span class="lang-content active" data-lang="bn">সব ছবি</span>
+        <span class="lang-content" data-lang="en">All Photos</span>
+      </button>
+      <button class="gallery-filter-btn px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 bg-gray-200 text-black dark:bg-neutral-700 dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-600" data-filter="events">
+        <span class="lang-content active" data-lang="bn">অনুষ্ঠান</span>
+        <span class="lang-content" data-lang="en">Events</span>
+      </button>
+      <button class="gallery-filter-btn px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 bg-gray-200 text-black dark:bg-neutral-700 dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-600" data-filter="sports">
+        <span class="lang-content active" data-lang="bn">খেলাধুলা</span>
+        <span class="lang-content" data-lang="en">Sports</span>
+      </button>
+      <button class="gallery-filter-btn px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 bg-gray-200 text-black dark:bg-neutral-700 dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-600" data-filter="cultural">
+        <span class="lang-content active" data-lang="bn">সাংস্কৃতিক</span>
+        <span class="lang-content" data-lang="en">Cultural</span>
+      </button>
+      <button class="gallery-filter-btn px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 bg-gray-200 text-black dark:bg-neutral-700 dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-600" data-filter="academic">
+        <span class="lang-content active" data-lang="bn">শিক্ষা</span>
+        <span class="lang-content" data-lang="en">Academic</span>
+      </button>
+    </div>
+
+    <!-- Photo Gallery Grid -->
+    <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Photo Item 1 - Events -->
+      <div class="gallery-item events animate-scale-in" style="animation-delay: 0.1s;" data-category="events">
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+               src="https://source.unsplash.com/random/400x300/?school-ceremony,graduation" 
+               alt="School Event"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x300/000000/FFFFFF?text=Event+Photo';"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-4 left-4 right-4">
+              <h4 class="text-white font-bold text-lg mb-1">
+                <span class="lang-content active" data-lang="bn">বার্ষিক পুরস্কার বিতরণী</span>
+                <span class="lang-content" data-lang="en">Annual Prize Distribution</span>
+              </h4>
+              <p class="text-gray-200 text-sm">
+                <span class="lang-content active" data-lang="bn">২০২৩</span>
+                <span class="lang-content" data-lang="en">2023</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Item 2 - Sports -->
+      <div class="gallery-item sports animate-scale-in" style="animation-delay: 0.2s;" data-category="sports">
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+               src="https://source.unsplash.com/random/400x300/?school-sports,football-match" 
+               alt="Sports Event"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x300/000000/FFFFFF?text=Sports+Photo';"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-4 left-4 right-4">
+              <h4 class="text-white font-bold text-lg mb-1">
+                <span class="lang-content active" data-lang="bn">আন্তঃশ্রেণি ফুটবল টুর্নামেন্ট</span>
+                <span class="lang-content" data-lang="en">Inter-Class Football Tournament</span>
+              </h4>
+              <p class="text-gray-200 text-sm">
+                <span class="lang-content active" data-lang="bn">২০২৩</span>
+                <span class="lang-content" data-lang="en">2023</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Item 3 - Cultural -->
+      <div class="gallery-item cultural animate-scale-in" style="animation-delay: 0.3s;" data-category="cultural">
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+               src="https://source.unsplash.com/random/400x300/?school-dance,cultural-program" 
+               alt="Cultural Event"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x300/000000/FFFFFF?text=Cultural+Photo';"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-4 left-4 right-4">
+              <h4 class="text-white font-bold text-lg mb-1">
+                <span class="lang-content active" data-lang="bn">বসন্ত উৎসব</span>
+                <span class="lang-content" data-lang="en">Spring Festival</span>
+              </h4>
+              <p class="text-gray-200 text-sm">
+                <span class="lang-content active" data-lang="bn">২০২৩</span>
+                <span class="lang-content" data-lang="en">2023</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Item 4 - Academic -->
+      <div class="gallery-item academic animate-scale-in" style="animation-delay: 0.4s;" data-category="academic">
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+               src="https://source.unsplash.com/random/400x300/?classroom-learning,students-studying" 
+               alt="Academic Activity"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x300/000000/FFFFFF?text=Academic+Photo';"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-4 left-4 right-4">
+              <h4 class="text-white font-bold text-lg mb-1">
+                <span class="lang-content active" data-lang="bn">বিজ্ঞান মেলা</span>
+                <span class="lang-content" data-lang="en">Science Fair</span>
+              </h4>
+              <p class="text-gray-200 text-sm">
+                <span class="lang-content active" data-lang="bn">২০২৩</span>
+                <span class="lang-content" data-lang="en">2023</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Item 5 - Events -->
+      <div class="gallery-item events animate-scale-in" style="animation-delay: 0.5s;" data-category="events">
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+               src="https://source.unsplash.com/random/400x300/?school-assembly,morning-prayer" 
+               alt="School Assembly"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x300/000000/FFFFFF?text=Assembly+Photo';"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-4 left-4 right-4">
+              <h4 class="text-white font-bold text-lg mb-1">
+                <span class="lang-content active" data-lang="bn">সকালের সমাবেশ</span>
+                <span class="lang-content" data-lang="en">Morning Assembly</span>
+              </h4>
+              <p class="text-gray-200 text-sm">
+                <span class="lang-content active" data-lang="bn">২০২৩</span>
+                <span class="lang-content" data-lang="en">2023</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Item 6 - Sports -->
+      <div class="gallery-item sports animate-scale-in" style="animation-delay: 0.6s;" data-category="sports">
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+               src="https://source.unsplash.com/random/400x300/?school-cricket,sports-day" 
+               alt="Cricket Match"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x300/000000/FFFFFF?text=Cricket+Photo';"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-4 left-4 right-4">
+              <h4 class="text-white font-bold text-lg mb-1">
+                <span class="lang-content active" data-lang="bn">ক্রিকেট প্রতিযোগিতা</span>
+                <span class="lang-content" data-lang="en">Cricket Competition</span>
+              </h4>
+              <p class="text-gray-200 text-sm">
+                <span class="lang-content active" data-lang="bn">২০২৩</span>
+                <span class="lang-content" data-lang="en">2023</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Item 7 - Cultural -->
+      <div class="gallery-item cultural animate-scale-in" style="animation-delay: 0.7s;" data-category="cultural">
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+               src="https://source.unsplash.com/random/400x300/?school-music,cultural-show" 
+               alt="Music Program"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x300/000000/FFFFFF?text=Music+Photo';"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-4 left-4 right-4">
+              <h4 class="text-white font-bold text-lg mb-1">
+                <span class="lang-content active" data-lang="bn">সঙ্গীত প্রতিযোগিতা</span>
+                <span class="lang-content" data-lang="en">Music Competition</span>
+              </h4>
+              <p class="text-gray-200 text-sm">
+                <span class="lang-content active" data-lang="bn">২০২৩</span>
+                <span class="lang-content" data-lang="en">2023</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo Item 8 - Academic -->
+      <div class="gallery-item academic animate-scale-in" style="animation-delay: 0.8s;" data-category="academic">
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+          <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" 
+               src="https://source.unsplash.com/random/400x300/?school-library,students-reading" 
+               alt="Library Session"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x300/000000/FFFFFF?text=Library+Photo';"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-4 left-4 right-4">
+              <h4 class="text-white font-bold text-lg mb-1">
+                <span class="lang-content active" data-lang="bn">গ্রন্থাগার কার্যক্রম</span>
+                <span class="lang-content" data-lang="en">Library Activities</span>
+              </h4>
+              <p class="text-gray-200 text-sm">
+                <span class="lang-content active" data-lang="bn">২০২৩</span>
+                <span class="lang-content" data-lang="en">2023</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-12 md:mt-16">
+      <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-black hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 button-glow">
+        <span class="lang-content active" data-lang="bn">আরও ছবি দেখুন</span>
+        <span class="lang-content" data-lang="en">Load More Photos</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .animate-scale-in {
+      animation: scaleIn 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .gallery-filter-btn.active {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .dark .gallery-filter-btn.active {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .gallery-item {
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item.hidden {
+      opacity: 0;
+      transform: scale(0.8);
+      pointer-events: none;
+    }
+
+    .button-glow {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .button-glow:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .dark .button-glow:hover {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15), 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+  </style>
+
+  <script>
+    // Parallax effect for background image
+    document.addEventListener('DOMContentLoaded', () => {
+      const parallaxBg = document.querySelector('#photo-gallery .parallax-bg');
+      if (parallaxBg) {
+        window.addEventListener('scroll', () => {
+          const scrollPosition = window.pageYOffset;
+          parallaxBg.style.backgroundPositionY = -scrollPosition * 0.1 + 'px';
+        });
+      }
+
+      // Gallery filter functionality
+      const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('gallery-item')) {
+              entry.target.classList.add('animate-scale-in');
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements
+      document.querySelectorAll('.gallery-item').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</section>

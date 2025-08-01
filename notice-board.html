@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="bn" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আদর্শ উচ্চ বিদ্যালয় - Adarsha High School</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            inter_tight: ['Inter Tight', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            bengali: ['Noto Sans Bengali', 'Kalpurush', 'SolaimanLipi', 'Mukti', 'system-ui', 'sans-serif']
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'slide-in': 'slideIn 0.3s ease-out',
+            'slide-out': 'slideOut 0.3s ease-in',
+            'fade-in': 'fadeIn 0.2s ease-out',
+            'scale-in': 'scaleIn 0.2s ease-out',
+            'ripple': 'ripple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'slow-pulse': 'slow-pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'fade-in-down': 'fadeInDown 0.8s ease-out forwards',
+            'fade-in-left': 'fadeInLeft 0.8s ease-out forwards',
+            'fade-in-right': 'fadeInRight 0.8s ease-out forwards',
+            'bounce-in': 'bounceIn 1s ease-out forwards',
+            'zoom-in': 'zoomIn 0.6s ease-out forwards',
+            'slide-up': 'slideUp 0.8s ease-out forwards',
+            'rotate-in': 'rotateIn 0.8s ease-out forwards',
+            'loading-spin': 'loadingSpin 2s linear infinite',
+            'loading-pulse': 'loadingPulse 1.5s ease-in-out infinite',
+            'typewriter': 'typewriter 3s steps(40) 1s forwards',
+            'cursor-blink': 'cursorBlink 1s infinite',
+            'gradient-shift': 'gradientShift 3s ease-in-out infinite',
+            'float-gentle': 'floatGentle 4s ease-in-out infinite',
+            'glow-pulse': 'glowPulse 2s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            slideIn: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(0)' },
+            },
+            slideOut: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-100%)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0.95)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            ripple: {
+              '0%': { transform: 'scale(0.8)', opacity: '1' },
+              '100%': { transform: 'scale(2.4)', opacity: '0' },
+            },
+            'slow-pulse': {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.05)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeInDown: {
+              '0%': { opacity: '0', transform: 'translateY(-30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            fadeInRight: {
+              '0%': { opacity: '0', transform: 'translateX(30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            bounceIn: {
+              '0%': { opacity: '0', transform: 'scale(0.3)' },
+              '50%': { opacity: '1', transform: 'scale(1.05)' },
+              '70%': { transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            zoomIn: {
+              '0%': { opacity: '0', transform: 'scale(0.5)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(50px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            rotateIn: {
+              '0%': { opacity: '0', transform: 'rotate(-180deg) scale(0.5)' },
+              '100%': { opacity: '1', transform: 'rotate(0deg) scale(1)' },
+            },
+            loadingSpin: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            },
+            loadingPulse: {
+              '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+              '50%': { opacity: '0.5', transform: 'scale(1.1)' },
+            },
+            typewriter: {
+              '0%': { width: '0' },
+              '100%': { width: '100%' },
+            },
+            cursorBlink: {
+              '0%, 50%': { opacity: '1' },
+              '51%, 100%': { opacity: '0' },
+            },
+            gradientShift: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+            floatGentle: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '33%': { transform: 'translateY(-10px) rotate(1deg)' },
+              '66%': { transform: 'translateY(5px) rotate(-1deg)' },
+            },
+            glowPulse: {
+              '0%, 100%': { boxShadow: '0 0 5px rgba(0, 0, 0, 0.1)' },
+              '50%': { boxShadow: '0 0 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.1)' },
+            },
+          },
+          screens: {
+            'xs': '475px',
+            '3xl': '1600px',
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    
+    @font-face {
+      font-family: 'Inter Tight';
+      src: url('https://pro.cult-ui.com/_next/static/media/103fc5fac08dcb15-s.p.woff2') format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+    }
+
+    /* Loading Screen Styles */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    }
+
+    .dark #loading-screen {
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    }
+
+    #loading-screen.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loading-logo {
+      width: 80px;
+      height: 80px;
+      background: #000;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      animation: loadingPulse 1.5s ease-in-out infinite;
+    }
+
+    .dark .loading-logo {
+      background: #fff;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #000;
+      border-radius: 50%;
+      animation: loadingSpin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    .dark .loading-spinner {
+      border-color: #333;
+      border-top-color: #fff;
+    }
+
+    .loading-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-out 0.5s forwards;
+    }
+
+    .dark .loading-text {
+      color: #fff;
+    }
+
+    /* Mouse Cursor Effects */
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background: #000;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9998;
+      transition: transform 0.1s ease-out;
+    }
+
+    .dark .cursor-dot {
+      background: #fff;
+    }
+
+    .cursor-outline {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9997;
+      transition: all 0.15s ease-out;
+    }
+
+    .dark .cursor-outline {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Scroll Reveal Animation Classes */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-reveal-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .scroll-reveal-left.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scroll-reveal-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .scroll-reveal-right.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scroll-reveal-scale {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.8s ease-out;
+    }
+
+    .scroll-reveal-scale.revealed {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Enhanced Hover Effects */
+    .hover-glow {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-glow::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .hover-glow:hover::before {
+      left: 100%;
+    }
+
+    .hover-glow:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .dark .hover-glow:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Magnetic Effect */
+    .magnetic {
+      transition: transform 0.3s ease;
+    }
+
+    /* Parallax Elements */
+    .parallax-element {
+      transition: transform 0.1s ease-out;
+    }
+
+    /* Floating Animation for Background Elements */
+    .floating-shape {
+      position: absolute;
+      opacity: 0.1;
+      animation: floatGentle 6s ease-in-out infinite;
+    }
+
+    .floating-shape:nth-child(2) { animation-delay: -2s; }
+    .floating-shape:nth-child(3) { animation-delay: -4s; }
+
+    /* Text Animation Effects */
+    .typewriter-text {
+      overflow: hidden;
+      border-right: 2px solid;
+      white-space: nowrap;
+      animation: typewriter 3s steps(40) 1s forwards, cursorBlink 1s infinite;
+    }
+
+    /* Gradient Text Animation */
+    .gradient-text {
+      background: linear-gradient(-45deg, #000, #333, #000, #666);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientShift 3s ease-in-out infinite;
+    }
+
+    .dark .gradient-text {
+      background: linear-gradient(-45deg, #fff, #ccc, #fff, #999);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Enhanced Button Effects */
+    .btn-enhanced {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .btn-enhanced::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+
+    .btn-enhanced:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .btn-enhanced:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Card Tilt Effect */
+    .tilt-card {
+      transition: transform 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    /* Stagger Animation Delays */
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    .stagger-5 { animation-delay: 0.5s; }
+    .stagger-6 { animation-delay: 0.6s; }
+
+    /* Original styles preserved */
+    body *::selection {
+      background: #d1d5db;
+      color: #1a202c !important;
+    }
+
+    .dark .bg-black *::selection,
+    .dark .bg-neutral-800 *::selection,
+    .dark .bg-zinc-900 *::selection {
+      background: #4b5563;
+      color: #ffffff;
+    }
+
+    .animate-float {
+      user-select: none;
+    }
+
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #000;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .nav-link:hover {
+      color: #000;
+    }
+    
+    .dark .nav-link::after {
+      background-color: #fff;
+    }
+    .dark .nav-link:hover {
+      color: #fff;
+    }
+    .dark .nav-link.active {
+      color: #fff;
+    }
+    
+    .footer-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .footer-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+    
+    .footer-link:hover::after {
+      width: 100%;
+    }
+    
+    .footer-link:hover {
+      color: #000;
+    }
+
+    .dark .footer-link:hover {
+      color: #fff;
+    }
+    
+    .social-icon {
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-3px);
+      opacity: 0.8;
+    }
+    
+    .navbar {
+      transition: all 0.3s ease;
+    }
+    
+    .navbar.scrolled {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+    }
+    
+    .dark .navbar.scrolled {
+      background-color: rgba(28, 27, 26, 0.95);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+    }
+
+    .mobile-menu {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+    
+    .mobile-menu-overlay {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    
+    .mobile-menu-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .mobile-nav-item {
+      transform: translateX(-20px);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .mobile-menu.open .mobile-nav-item {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    .mobile-nav-item:nth-child(1) { transition-delay: 0.1s; }
+    .mobile-nav-item:nth-child(2) { transition-delay: 0.15s; }
+    .mobile-nav-item:nth-child(3) { transition-delay: 0.2s; }
+    .mobile-nav-item:nth-child(4) { transition-delay: 0.25s; }
+    .mobile-nav-item:nth-child(5) { transition-delay: 0.3s; }
+    .mobile-nav-item:nth-child(6) { transition-delay: 0.35s; }
+    .mobile-nav-item:nth-child(7) { transition-delay: 0.4s; }
+    .mobile-nav-item:nth-child(8) { transition-delay: 0.45s; }
+    .mobile-nav-item:nth-child(9) { transition-delay: 0.5s; }
+    .mobile-nav-item:nth-child(10) { transition-delay: 0.55s; }
+    .mobile-nav-item:nth-child(11) { transition-delay: 0.6s; }
+    
+    .hamburger {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .hamburger.open {
+      transform: rotate(180deg);
+    }
+    
+    .hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: #000;
+      margin: 4px 0;
+      transition: 0.3s;
+      transform-origin: center;
+    }
+    
+    .dark .hamburger span {
+      background-color: #fff;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 2px;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #a1a1a1;
+    }
+
+    .dark .custom-scrollbar::-webkit-scrollbar-track {
+      background: #333;
+    }
+    
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #555;
+    }
+    
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #777;
+    }
+    
+    .bengali-text {
+      font-feature-settings: "kern" 1, "liga" 1;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .lang-toggle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      background: #f3f4f6;
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+    }
+    .dark .lang-toggle {
+      background: #333;
+    }
+    
+    .lang-toggle button {
+      position: relative;
+      z-index: 2;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      color: #6b7280;
+    }
+    
+    .lang-toggle button.active {
+      background: #000;
+      color: #fff;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .dark .lang-toggle button.active {
+      background: #555;
+      color: #fff;
+    }
+    
+    .lang-content {
+      display: none;
+    }
+    
+    .lang-content.active {
+      display: block;
+    }
+    
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 2rem;
+        line-height: 1.1;
+      }
+      
+      .mobile-menu {
+        width: 100vw;
+        max-width: 100vw;
+      }
+    }
+    
+    @media (max-width: 475px) {
+      .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.1;
+      }
+      
+      .box-border.gap-x-8.grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .box-border.gap-x-[normal].flex {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .relative.box-border.shrink-0 {
+        height: auto;
+        width: 100%;
+      }
+      
+      .items-center.bg-gray-50 {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+      }
+      
+      .shadow-\[rgba$$0\,0\,0\,0$$_0px_0px_0px_0px\,rgba$$0\,0\,0\,0$$_0px_0px_0px_0px\,rgba$$0\,0\,0\,0\.05$$_0px_1px_1px_0px\,rgba$$255\,252\,240\,0\.5$$_0px_1px_1px_0px_inset\,rgba$$255\,255\,255\,0\.1$$_0px_0px_0px_1px_inset\,rgba$$28\,27\,26\,0\.5$$_0px_0px_1px_0px\] {
+        border-radius: 1rem;
+      }
+
+      .box-border.gap-x-[normal].flex.flex-col.sm\:flex-row.gap-y-4.sm\:gap-y-\[normal\].md\:gap-x-0.md\:gap-y-0 {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .shadow-\[rgba$$0,0,0,0$$_0px_0px_0px_0px,rgba$$0,0,0,0$$_0px_0px_0px_0px,rgba$$0,0,0,0.05$$_0px_1px_1px_0px,rgba$$255,252,240,0.5$$_0px_1px_1px_0px_inset,rgba$$255,255,255,0.1$$_0px_0px_0px_1px_inset,rgba$$28,27,26,0.5$$_0px_0px_1px_0px\].box-border.gap-x-1.flex.flex-col.justify-center.gap-y-1.px-4.rounded-2xl.sm\:rounded-r-2xl.sm\:rounded-l-none {
+        border-radius: 1rem;
+        padding: 1.5rem;
+      }
+    }
+
+    #themeSwitch.dark .toggle-thumb {
+      transform: translateX(100%);
+    }
+
+    #themeSwitch.dark #sunIcon {
+      opacity: 1;
+    }
+
+    #themeSwitch.dark #moonIcon {
+      opacity: 0;
+    }
+
+    #themeSwitch #sunIcon {
+      opacity: 0;
+    }
+
+    #themeSwitch #moonIcon {
+      opacity: 1;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      background-color: #FFFFFF;
+      min-width: 200px;
+      box-shadow: rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0.02) 0px 1px 0px 0px inset,rgba(0,0,0,0.02) 0px 0px 0px 1px inset,rgba(255,255,255,0.25) 0px 0px 0px 1px;
+      z-index: 100;
+      border-radius: 1rem;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
+      padding: 0.5rem;
+    }
+
+    .dark .dropdown-content {
+      background-color: #27272A;
+      box-shadow: rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0.05) 0px 1px 1px 0px,rgba(255,252,240,0.05) 0px 1px 1px 0px inset,rgba(255,255,255,0.02) 0px 0px 0px 1px inset,rgba(28,27,26,0.5) 0px 0px 1px 0px;
+    }
+
+    .dropdown-content.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      font-weight: 500;
+      border-radius: 0.5rem;
+    }
+
+    .dark .dropdown-content a {
+      color: #e0e0e0;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      color: #000;
+    }
+
+    .dark .dropdown-content a:hover {
+      background-color: #3a3a3a;
+      color: #fff;
+    }
+
+    @media (min-width: 1024px) {
+      .dropdown-content {
+        top: calc(100% + 15px);
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+      }
+      .dropdown-content.show {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    .mobile-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 12px 16px;
+      color: #1a202c;
+      background-color: #f9f9f9;
+      border-radius: 0.5rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .dark .mobile-dropdown-toggle {
+      color: #fff;
+      background-color: #333;
+    }
+
+    .mobile-dropdown-toggle:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dark .mobile-dropdown-toggle:hover {
+      background-color: #444;
+    }
+
+    .mobile-dropdown-content {
+      display: none;
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      border-left: 2px solid #e2e8f0;
+    }
+
+    .dark .mobile-dropdown-content {
+      border-left-color: #4a5568;
+    }
+
+    .mobile-dropdown-content.open {
+      display: block;
+    }
+
+    .mobile-dropdown-arrow {
+      transition: transform 0.2s ease;
+    }
+
+    .mobile-dropdown-arrow.rotate {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="font-bengali bg-white text-zinc-950 min-h-screen flex flex-col overflow-x-hidden bengali-text transition-colors duration-300">
+  
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white dark:text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    </div>
+    <div class="loading-spinner"></div>
+    <div class="loading-text">
+      <span class="lang-content active" data-lang="bn">লোড হচ্ছে...</span>
+      <span class="lang-content" data-lang="en">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Floating Background Shapes -->
+  <div class="floating-shape w-20 h-20 bg-gray-200 dark:bg-gray-700 rounded-full" style="top: 10%; left: 5%;"></div>
+  <div class="floating-shape w-16 h-16 bg-gray-300 dark:bg-gray-600 rounded-full" style="top: 60%; right: 10%;"></div>
+  <div class="floating-shape w-12 h-12 bg-gray-400 dark:bg-gray-500 rounded-full" style="bottom: 20%; left: 15%;"></div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenuOverlay" class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"></div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-white dark:bg-zinc-900 z-50 shadow-2xl md:hidden custom-scrollbar overflow-y-auto transition-colors duration-300">
+    <div class="flex flex-col h-full">
+      <!-- Mobile Menu Header -->
+      <div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-100 dark:border-neutral-700">
+        <div class="flex items-center">
+          <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <span class="text-black dark:text-white font-medium text-base sm:text-lg tracking-[-0.4px]">
+            <span class="lang-content active" data-lang="bn">আদর্শ <span class="font-semibold">উচ্চ বিদ্যালয়</span></span>
+            <span class="lang-content" data-lang="en">Adarsha <span class="font-semibold">High School</span></span>
+          </span>
+        </div>
+        <button id="closeMobileMenu" class="p-2 hover:bg-gray-100 dark:hover:bg-neutral-700 rounded-lg transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Language Toggle in Mobile Menu -->
+      <div class="p-4 sm:p-6 border-b border-gray-100 dark:border-neutral-700">
+        <div class="lang-toggle">
+          <button onclick="switchLanguage('bn')" class="lang-btn active" data-lang="bn">বাংলা</button>
+          <button onclick="switchLanguage('en')" class="lang-btn" data-lang="en">English</button>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="flex-1 py-4 sm:py-6">
+        <nav class="space-y-2 px-4 sm:px-6">
+          <div class="mobile-nav-item">
+            <a href="#home" class="flex items-center justify-between p-3 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors group">
+              <div class="flex items-center">
+                <div class="w-8 h-8 bg-gray-100 dark:bg-neutral-700 rounded-lg flex items-center justify-center mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-medium">
+                    <span class="lang-content active" data-lang="bn">হোম</span>
+                    <span class="lang-content" data-lang="en">Home</span>
+                  </div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="lang-content active" data-lang="bn">হোম পেজ</span>
+                    <span class="lang-content" data-lang="en">Home Page</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <div class="mobile-nav-item">
+            <a href="#about" class="flex items-center justify-between p-3 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors group">
+              <div class="flex items-center">
+                <div class="w-8 h-8 bg-gray-100 dark:bg-neutral-700 rounded-lg flex items-center justify-center mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-medium">
+                    <span class="lang-content active" data-lang="bn">প্রতিষ্ঠান পরিচিতি</span>
+                    <span class="lang-content" data-lang="en">About Institution</span>
+                  </div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="lang-content active" data-lang="bn">আমাদের সম্পর্কে</span>
+                    <span class="lang-content" data-lang="en">About Us</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <div class="mobile-nav-item">
+            <a href="#teachers" class="flex items-center justify-between p-3 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors group">
+              <div class="flex items-center">
+                <div class="w-8 h-8 bg-gray-100 dark:bg-neutral-700 rounded-lg flex items-center justify-center mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-medium">
+                    <span class="lang-content active" data-lang="bn">শিক্ষকমণ্ডলী</span>
+                    <span class="lang-content" data-lang="en">Teachers</span>
+                  </div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="lang-content active" data-lang="bn">শিক্ষক তথ্য</span>
+                    <span class="lang-content" data-lang="en">Faculty Info</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <div class="mobile-nav-item">
+            <a href="#students" class="flex items-center justify-between p-3 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors group">
+              <div class="flex items-center">
+                <div class="w-8 h-8 bg-gray-100 dark:bg-neutral-700 rounded-lg flex items-center justify-center mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-medium">
+                    <span class="lang-content active" data-lang="bn">শিক্ষার্থী তথ্য</span>
+                    <span class="lang-content" data-lang="en">Students Info</span>
+                  </div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="lang-content active" data-lang="bn">ছাত্র-ছাত্রী</span>
+                    <span class="lang-content" data-lang="en">Student Details</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Mobile Dropdown: একাডেমিক (Academic) -->
+          <div class="mobile-nav-item">
+            <button class="mobile-dropdown-toggle" data-target="academic-dropdown-content">
+              <span class="lang-content active" data-lang="bn">একাডেমিক</span>
+              <span class="lang-content" data-lang="en">Academic</span>
+              <svg class="mobile-dropdown-arrow h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <ul id="academic-dropdown-content" class="mobile-dropdown-content space-y-2">
+              <li><a href="#admission-info" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">ভর্তি তথ্য</span>
+                <span class="lang-content" data-lang="en">Admission Info</span>
+              </a></li>
+              <li><a href="#exam-results" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">পরীক্ষার ফলাফল</span>
+                <span class="lang-content" data-lang="en">Exam Results</span>
+              </a></li>
+              <li><a href="#syllabus" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">সিলেবাস</span>
+                <span class="lang-content" data-lang="en">Syllabus</span>
+              </a></li>
+              <li><a href="#class-routine" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">ক্লাস রুটিন</span>
+                <span class="lang-content" data-lang="en">Class Routine</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <!-- Mobile Dropdown: তথ্য (Information) -->
+          <div class="mobile-nav-item">
+            <button class="mobile-dropdown-toggle" data-target="info-dropdown-content">
+              <span class="lang-content active" data-lang="bn">তথ্য</span>
+              <span class="lang-content" data-lang="en">Information</span>
+              <svg class="mobile-dropdown-arrow h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <ul id="info-dropdown-content" class="mobile-dropdown-content space-y-2">
+              <li><a href="#notice-board" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">নোটিশ বোর্ড</span>
+                <span class="lang-content" data-lang="en">Notice Board</span>
+              </a></li>
+              <li><a href="#academic-calendar" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">একাডেমিক ক্যালেন্ডার</span>
+                <span class="lang-content" data-lang="en">Academic Calendar</span>
+              </a></li>
+              <li><a href="#events" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">অনুষ্ঠান</span>
+                <span class="lang-content" data-lang="en">Events</span>
+              </a></li>
+              <li><a href="#photo-gallery" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">ফটো গ্যালারি</span>
+                <span class="lang-content" data-lang="en">Photo Gallery</span>
+              </a></li>
+            </ul>
+          </div>
+
+          <!-- Mobile Dropdown: রিসোর্স (Resources) -->
+          <div class="mobile-nav-item">
+            <button class="mobile-dropdown-toggle" data-target="resources-dropdown-content">
+              <span class="lang-content active" data-lang="bn">রিসোর্স</span>
+              <span class="lang-content" data-lang="en">Resources</span>
+              <svg class="mobile-dropdown-arrow h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <ul id="resources-dropdown-content" class="mobile-dropdown-content space-y-2">
+              <li><a href="#library-section" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">লাইব্রেরি</span>
+                <span class="lang-content" data-lang="en">Library</span>
+              </a></li>
+              <li><a href="#laboratory-section" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">ল্যাবরেটরি</span>
+                <span class="lang-content" data-lang="en">Laboratory</span>
+              </a></li>
+              <li><a href="#sports" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">খেলাধুলা</span>
+                <span class="lang-content" data-lang="en">Sports</span>
+              </a></li>
+              <li><a href="#downloads" class="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors">
+                <span class="lang-content active" data-lang="bn">ডাউনলোড</span>
+                <span class="lang-content" data-lang="en">Downloads</span>
+              </a></li>
+            </ul>
+          </div>
+          
+          <div class="mobile-nav-item">
+            <a href="#contact" class="flex items-center justify-between p-3 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-neutral-800 rounded-lg transition-colors group">
+              <div class="flex items-center">
+                <div class="w-8 h-8 bg-gray-100 dark:bg-neutral-700 rounded-lg flex items-center justify-center mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-medium">
+                    <span class="lang-content active" data-lang="bn">যোগাযোগ</span>
+                    <span class="lang-content" data-lang="en">Contact</span>
+                  </div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="lang-content active" data-lang="bn">যোগাযোগের তথ্য</span>
+                    <span class="lang-content" data-lang="en">Contact Info</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </nav>
+      </div>
+      
+      <!-- Mobile Menu Footer -->
+      <div class="border-t border-gray-100 dark:border-neutral-700 p-4 sm:p-6">
+        <div class="space-y-4">
+          <!-- Contact Button -->
+          <a href="#contact" class="flex items-center justify-center w-full p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors btn-enhanced">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span class="lang-content active" data-lang="bn">যোগাযোগ করুন</span>
+            <span class="lang-content" data-lang="en">Contact Us</span>
+          </a>
+          
+          <div class="text-center">
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="lang-content active" data-lang="bn">© ২০২৫ আদর্শ উচ্চ বিদ্যালয়</span>
+              <span class="lang-content" data-lang="en">© 2025 Adarsha High School</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header id="navbar" class="navbar fixed top-0 left-0 w-full z-30 bg-neutral-50 dark:bg-zinc-800 border-b border-neutral-100 dark:border-neutral-800 transition-colors duration-300">
+    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+      <div class="flex items-center justify-between py-2 md:py-3 lg:py-4">
+        <!-- Logo and Brand -->
+        <div class="flex items-center">
+          <a href="/" class="flex items-center magnetic" aria-label="আদর্শ উচ্চ বিদ্যালয়">
+            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-black rounded-lg flex items-center justify-center mr-3 hover-glow">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 lg:h-6 lg:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <p class="text-black dark:text-white font-medium tracking-[-0.4px] text-base lg:text-lg">
+              <span class="lang-content active" data-lang="bn">আদর্শ <span class="font-semibold">উচ্চ বিদ্যালয়</span></span>
+              <span class="lang-content" data-lang="en">Adarsha <span class="font-semibold">High School</span></span>
+            </p>
+          </a>
+          
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center ml-8 xl:ml-12">
+            <a href="#home" class="nav-link relative inline-flex items-center text-black dark:text-neutral-300 text-sm xl:text-base font-medium leading-5 py-1 magnetic">
+              <span class="flex items-center">
+                <span class="lang-content active" data-lang="bn">হোম</span>
+                <span class="lang-content" data-lang="en">Home</span>
+              </span>
+              <span class="absolute block h-0.5 w-full bg-black dark:bg-white left-0 -bottom-px"></span>
+            </a>
+
+            <!-- Dropdown: আমাদের সম্পর্কে (About Us) -->
+            <div class="dropdown ml-8 xl:ml-10" data-dropdown-id="about">
+              <button class="nav-link relative inline-flex items-center text-neutral-600 dark:text-neutral-300 text-sm xl:text-base font-medium leading-5 py-1 focus:outline-none magnetic">
+                <span class="flex items-center">
+                  <span class="lang-content active" data-lang="bn">আমাদের সম্পর্কে</span>
+                  <span class="lang-content" data-lang="en">About Us</span>
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </span>
+              </button>
+              <div class="dropdown-content" id="about-dropdown-content-desktop">
+                <a href="#about" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">প্রতিষ্ঠান পরিচিতি</span>
+                  <span class="lang-content" data-lang="en">About</span>
+                </a>
+                <a href="#teachers" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">শিক্ষকমণ্ডলী</span>
+                  <span class="lang-content" data-lang="en">Teachers</span>
+                </a>
+                <a href="#students" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">শিক্ষার্থী</span>
+                  <span class="lang-content" data-lang="en">Students</span>
+                </a>
+              </div>
+            </div>           
+
+            <!-- Dropdown: একাডেমিক (Academic) -->
+            <div class="dropdown ml-8 xl:ml-10" data-dropdown-id="academic">
+              <button class="nav-link relative inline-flex items-center text-neutral-600 dark:text-neutral-300 text-sm xl:text-base font-medium leading-5 py-1 focus:outline-none magnetic">
+                <span class="flex items-center">
+                  <span class="lang-content active" data-lang="bn">একাডেমিক</span>
+                  <span class="lang-content" data-lang="en">Academic</span>
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </span>
+              </button>
+              <div class="dropdown-content" id="academic-dropdown-content-desktop">
+                <a href="#admission-info" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">ভর্তি তথ্য</span>
+                  <span class="lang-content" data-lang="en">Admission Info</span>
+                </a>
+                <a href="#exam-results" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">পরীক্ষার ফলাফল</span>
+                  <span class="lang-content" data-lang="en">Exam Results</span>
+                </a>
+                <a href="#syllabus" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">সিলেবাস</span>
+                  <span class="lang-content" data-lang="en">Syllabus</span>
+                </a>
+                <a href="#class-routine" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">ক্লাস রুটিন</span>
+                  <span class="lang-content" data-lang="en">Class Routine</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Dropdown: তথ্য (Information) -->
+            <div class="dropdown ml-8 xl:ml-10" data-dropdown-id="information">
+              <button class="nav-link relative inline-flex items-center text-neutral-600 dark:text-neutral-300 text-sm xl:text-base font-medium leading-5 py-1 focus:outline-none magnetic">
+                <span class="flex items-center">
+                  <span class="lang-content active" data-lang="bn">তথ্য</span>
+                  <span class="lang-content" data-lang="en">Information</span>
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </span>
+              </button>
+              <div class="dropdown-content" id="information-dropdown-content-desktop">
+                <a href="#notice-board" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">নোটিশ বোর্ড</span>
+                  <span class="lang-content" data-lang="en">Notice Board</span>
+                </a>
+                <a href="#academic-calendar" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">একাডেমিক ক্যালেন্ডার</span>
+                  <span class="lang-content" data-lang="en">Academic Calendar</span>
+                </a>
+                <a href="#events" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">অনুষ্ঠান</span>
+                  <span class="lang-content" data-lang="en">Events</span>
+                </a>
+                <a href="#photo-gallery" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">ফটো গ্যালারি</span>
+                  <span class="lang-content" data-lang="en">Photo Gallery</span>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Dropdown: রিসোর্স (Resources) -->
+            <div class="dropdown ml-8 xl:ml-10" data-dropdown-id="resources">
+              <button class="nav-link relative inline-flex items-center text-neutral-600 dark:text-neutral-300 text-sm xl:text-base font-medium leading-5 py-1 focus:outline-none magnetic">
+                <span class="flex items-center">
+                  <span class="lang-content active" data-lang="bn">রিসোর্স</span>
+                  <span class="lang-content" data-lang="en">Resources</span>
+                  <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </span>
+              </button>
+              <div class="dropdown-content" id="resources-dropdown-content-desktop">
+                <a href="#library-section" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">লাইব্রেরি</span>
+                  <span class="lang-content" data-lang="en">Library</span>
+                </a>
+                <a href="#laboratory-section" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">ল্যাবরেটরি</span>
+                  <span class="lang-content" data-lang="en">Laboratory</span>
+                </a>
+                <a href="#sports" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">খেলাধুলা</span>
+                  <span class="lang-content" data-lang="en">Sports</span>
+                </a>
+                <a href="#downloads" class="nav-link">
+                  <span class="lang-content active" data-lang="bn">ডাউনলোড</span>
+                  <span class="lang-content" data-lang="en">Downloads</span>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        
+        <!-- Right Navigation -->
+        <nav class="flex items-center">
+          <!-- Theme Toggle -->
+          <div id="themeSwitch" class="relative w-14 h-8 flex items-center bg-gray-200 dark:bg-neutral-700 rounded-full p-1 cursor-pointer transition-colors duration-300 magnetic">
+            <!-- Toggle Thumb -->
+            <div class="toggle-thumb absolute bg-white dark:bg-zinc-900 w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 ease-in-out"></div>
+            
+            <!-- Icons -->
+            <svg id="sunIcon" class="absolute left-1 h-5 w-5 text-yellow-500 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12H2m8.66-8.66l-.707-.707m1.414 1.414L10.95 4.343M12 12l.707.707m-1.414-1.414L13.05 10.95m7.343 7.343l-.707-.707m1.414 1.414L20.354 18.354M3.657 3.657l.707.707m-1.414 1.414L4.343 3.657m7.343 7.343l-.707-.707m1.414 1.414L13.05 10.95" />
+            </svg>
+            <svg id="moonIcon" class="absolute right-1 h-5 w-5 text-gray-800 dark:text-gray-200 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </div>
+
+          <!-- Language Toggle -->
+          <div class="hidden md:block ml-4 mr-4">
+            <div class="lang-toggle">
+              <button onclick="switchLanguage('bn')" class="lang-btn active" data-lang="bn">বাংলা</button>
+              <button onclick="switchLanguage('en')" class="lang-btn" data-lang="en">English</button>
+            </div>
+          </div>
+          
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-black hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 btn-enhanced magnetic">
+            <span class="lang-content active" data-lang="bn">যোগাযোগ</span>
+            <span class="lang-content" data-lang="en">Contact</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          
+          <!-- Mobile Menu Button -->
+          <button id="openMobileMenu" type="button" aria-label="Open mobile menu" class="lg:hidden flex items-center justify-center h-10 w-10 text-sm font-medium ml-3 rounded-md hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors magnetic">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Main content -->
+  <main class="flex-grow pt-14 md:pt-16 lg:pt-18 bg-gray-100 dark:bg-neutral-700 text-zinc-950 dark:text-white transition-colors duration-300">
+
+ <section id="notice-board" class="relative overflow-hidden py-16 md:py-24 bg-gray-50 dark:bg-neutral-900 transition-colors duration-300">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="floating-shape absolute top-20 left-10 w-20 h-20 bg-gray-200 dark:bg-neutral-700 rounded-full opacity-20 animate-float"></div>
+    <div class="floating-shape absolute top-40 right-20 w-16 h-16 bg-gray-300 dark:bg-neutral-600 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+    <div class="floating-shape absolute bottom-32 left-1/4 w-12 h-12 bg-gray-200 dark:bg-neutral-700 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
+    <!-- Section Header -->
+    <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 md:mb-16 animate-fade-in">
+      <div class="mb-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black dark:text-white animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+        </svg>
+      </div>
+      <h3 class="text-black dark:text-white font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight mb-2">
+        <span class="lang-content active" data-lang="bn">নোটিশ বোর্ড</span>
+        <span class="lang-content" data-lang="en">Notice Board</span>
+      </h3>
+      <p class="text-gray-600 dark:text-gray-400 text-lg sm:text-xl md:text-2xl font-normal leading-relaxed mb-4">
+        <span class="lang-content active" data-lang="bn">আমাদের বিদ্যালয়ের সর্বশেষ ঘোষণা এবং গুরুত্বপূর্ণ নোটিশসমূহ।</span>
+        <span class="lang-content" data-lang="en">Latest announcements and important notices from our school.</span>
+      </p>
+      <div class="w-24 h-1 bg-black dark:bg-white rounded-full animate-pulse"></div>
+    </div>
+
+    <!-- Featured Notice -->
+    <div class="mb-16 md:mb-24">
+      <div class="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border-l-4 border-red-500 p-6 rounded-r-2xl shadow-lg animate-slide-up">
+        <div class="flex items-start">
+          <div class="flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h4 class="text-lg font-bold text-red-800 dark:text-red-300">
+              <span class="lang-content active" data-lang="bn">জরুরি নোটিশ</span>
+              <span class="lang-content" data-lang="en">Urgent Notice</span>
+            </h4>
+            <p class="text-red-700 dark:text-red-200 mt-2">
+              <span class="lang-content active" data-lang="bn">আগামী ১৫ জানুয়ারি থেকে শীতকালীন ছুটি শুরু হবে। সকল শিক্ষার্থী ও অভিভাবকদের অনুরোধ করা হচ্ছে এই তারিখটি মনে রাখার জন্য।</span>
+              <span class="lang-content" data-lang="en">Winter vacation will start from January 15th. All students and parents are requested to remember this date.</span>
+            </p>
+            <p class="text-sm text-red-600 dark:text-red-300 mt-2">
+              <span class="lang-content active" data-lang="bn">প্রকাশিত: ৫ জানুয়ারি, ২০২৪</span>
+              <span class="lang-content" data-lang="en">Published: January 5, 2024</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notice Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 md:mb-24">
+      <!-- Notice Card 1 -->
+      <div class="notice-card bg-gray-100 dark:bg-neutral-800 p-2 rounded-2xl hover-lift transition-all duration-500 animate-slide-up" style="animation-delay: 0.1s;">
+        <div class="bg-white dark:bg-zinc-900 rounded-[10px] p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+              <span class="lang-content active" data-lang="bn">পরীক্ষা</span>
+              <span class="lang-content" data-lang="en">Exam</span>
+            </span>
+            <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="lang-content active" data-lang="bn">২ দিন আগে</span>
+              <span class="lang-content" data-lang="en">2 days ago</span>
+            </span>
+          </div>
+          <h4 class="text-xl font-bold text-black dark:text-white mb-3">
+            <span class="lang-content active" data-lang="bn">বার্ষিক পরীক্ষার সময়সূচী প্রকাশ</span>
+            <span class="lang-content" data-lang="en">Annual Exam Schedule Released</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+            <span class="lang-content active" data-lang="bn">২০২৪ সালের বার্ষিক পরীক্ষার সময়সূচী প্রকাশিত হয়েছে। সকল শিক্ষার্থী তাদের নিজ নিজ শ্রেণির সময়সূচী দেখে নিন।</span>
+            <span class="lang-content" data-lang="en">The annual exam schedule for 2024 has been published. All students should check their respective class schedules.</span>
+          </p>
+          <a href="#" class="inline-flex items-center text-black dark:text-white text-sm font-medium hover:underline">
+            <span class="lang-content active" data-lang="bn">বিস্তারিত দেখুন</span>
+            <span class="lang-content" data-lang="en">Read More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Notice Card 2 -->
+      <div class="notice-card bg-gray-100 dark:bg-neutral-800 p-2 rounded-2xl hover-lift transition-all duration-500 animate-slide-up" style="animation-delay: 0.2s;">
+        <div class="bg-white dark:bg-zinc-900 rounded-[10px] p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+              <span class="lang-content active" data-lang="bn">ইভেন্ট</span>
+              <span class="lang-content" data-lang="en">Event</span>
+            </span>
+            <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="lang-content active" data-lang="bn">৫ দিন আগে</span>
+              <span class="lang-content" data-lang="en">5 days ago</span>
+            </span>
+          </div>
+          <h4 class="text-xl font-bold text-black dark:text-white mb-3">
+            <span class="lang-content active" data-lang="bn">বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৪</span>
+            <span class="lang-content" data-lang="en">Annual Sports Competition 2024</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+            <span class="lang-content active" data-lang="bn">আগামী ২০ জানুয়ারি আমাদের বিদ্যালয়ের বার্ষিক ক্রীড়া প্রতিযোগিতা অনুষ্ঠিত হবে। সকল শিক্ষার্থী অংশগ্রহণের জন্য আমন্ত্রিত।</span>
+            <span class="lang-content" data-lang="en">Our school's annual sports competition will be held on January 20th. All students are invited to participate.</span>
+          </p>
+          <a href="#" class="inline-flex items-center text-black dark:text-white text-sm font-medium hover:underline">
+            <span class="lang-content active" data-lang="bn">বিস্তারিত দেখুন</span>
+            <span class="lang-content" data-lang="en">Read More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Notice Card 3 -->
+      <div class="notice-card bg-gray-100 dark:bg-neutral-800 p-2 rounded-2xl hover-lift transition-all duration-500 animate-slide-up" style="animation-delay: 0.3s;">
+        <div class="bg-white dark:bg-zinc-900 rounded-[10px] p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
+              <span class="lang-content active" data-lang="bn">ভর্তি</span>
+              <span class="lang-content" data-lang="en">Admission</span>
+            </span>
+            <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="lang-content active" data-lang="bn">১ সপ্তাহ আগে</span>
+              <span class="lang-content" data-lang="en">1 week ago</span>
+            </span>
+          </div>
+          <h4 class="text-xl font-bold text-black dark:text-white mb-3">
+            <span class="lang-content active" data-lang="bn">২০২৪-২৫ শিক্ষাবর্ষে ভর্তি শুরু</span>
+            <span class="lang-content" data-lang="en">Admission Started for 2024-25 Session</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+            <span class="lang-content active" data-lang="bn">২০২৪-২৫ শিক্ষাবর্ষের জন্য ভর্তি কার্যক্রম শুরু হয়েছে। আগ্রহী অভিভাবকগণ নির্ধারিত সময়ের মধ্যে আবেদন করুন।</span>
+            <span class="lang-content" data-lang="en">Admission process for the 2024-25 academic year has started. Interested parents should apply within the specified time.</span>
+          </p>
+          <a href="#" class="inline-flex items-center text-black dark:text-white text-sm font-medium hover:underline">
+            <span class="lang-content active" data-lang="bn">বিস্তারিত দেখুন</span>
+            <span class="lang-content" data-lang="en">Read More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Notice Card 4 -->
+      <div class="notice-card bg-gray-100 dark:bg-neutral-800 p-2 rounded-2xl hover-lift transition-all duration-500 animate-slide-up" style="animation-delay: 0.4s;">
+        <div class="bg-white dark:bg-zinc-900 rounded-[10px] p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+              <span class="lang-content active" data-lang="bn">সাধারণ</span>
+              <span class="lang-content" data-lang="en">General</span>
+            </span>
+            <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="lang-content active" data-lang="bn">২ সপ্তাহ আগে</span>
+              <span class="lang-content" data-lang="en">2 weeks ago</span>
+            </span>
+          </div>
+          <h4 class="text-xl font-bold text-black dark:text-white mb-3">
+            <span class="lang-content active" data-lang="bn">নতুন ইউনিফর্ম নীতিমালা</span>
+            <span class="lang-content" data-lang="en">New Uniform Policy</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+            <span class="lang-content active" data-lang="bn">আগামী শিক্ষাবর্ষ থেকে নতুন ইউনিফর্ম নীতিমালা কার্যকর হবে। বিস্তারিত জানতে অফিসে যোগাযোগ করুন।</span>
+            <span class="lang-content" data-lang="en">New uniform policy will be effective from the next academic year. Contact the office for details.</span>
+          </p>
+          <a href="#" class="inline-flex items-center text-black dark:text-white text-sm font-medium hover:underline">
+            <span class="lang-content active" data-lang="bn">বিস্তারিত দেখুন</span>
+            <span class="lang-content" data-lang="en">Read More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Notice Card 5 -->
+      <div class="notice-card bg-gray-100 dark:bg-neutral-800 p-2 rounded-2xl hover-lift transition-all duration-500 animate-slide-up" style="animation-delay: 0.5s;">
+        <div class="bg-white dark:bg-zinc-900 rounded-[10px] p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
+              <span class="lang-content active" data-lang="bn">শিক্ষা</span>
+              <span class="lang-content" data-lang="en">Education</span>
+            </span>
+            <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="lang-content active" data-lang="bn">৩ সপ্তাহ আগে</span>
+              <span class="lang-content" data-lang="en">3 weeks ago</span>
+            </span>
+          </div>
+          <h4 class="text-xl font-bold text-black dark:text-white mb-3">
+            <span class="lang-content active" data-lang="bn">অনলাইন ক্লাস সময়সূচী</span>
+            <span class="lang-content" data-lang="en">Online Class Schedule</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+            <span class="lang-content active" data-lang="bn">প্রতিকূল আবহাওয়ার কারণে অনলাইন ক্লাসের ব্যবস্থা করা হয়েছে। সময়সূচী দেখে নিন।</span>
+            <span class="lang-content" data-lang="en">Online classes have been arranged due to adverse weather conditions. Please check the schedule.</span>
+          </p>
+          <a href="#" class="inline-flex items-center text-black dark:text-white text-sm font-medium hover:underline">
+            <span class="lang-content active" data-lang="bn">বিস্তারিত দেখুন</span>
+            <span class="lang-content" data-lang="en">Read More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Notice Card 6 -->
+      <div class="notice-card bg-gray-100 dark:bg-neutral-800 p-2 rounded-2xl hover-lift transition-all duration-500 animate-slide-up" style="animation-delay: 0.6s;">
+        <div class="bg-white dark:bg-zinc-900 rounded-[10px] p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200">
+              <span class="lang-content active" data-lang="bn">সাংস্কৃতিক</span>
+              <span class="lang-content" data-lang="en">Cultural</span>
+            </span>
+            <span class="text-xs text-gray-500 dark:text-gray-400">
+              <span class="lang-content active" data-lang="bn">১ মাস আগে</span>
+              <span class="lang-content" data-lang="en">1 month ago</span>
+            </span>
+          </div>
+          <h4 class="text-xl font-bold text-black dark:text-white mb-3">
+            <span class="lang-content active" data-lang="bn">বিজয় দিবস উদযাপন</span>
+            <span class="lang-content" data-lang="en">Victory Day Celebration</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+            <span class="lang-content active" data-lang="bn">মহান বিজয় দিবস উপলক্ষে আমাদের বিদ্যালয়ে বিশেষ অনুষ্ঠানের আয়োজন করা হয়েছিল।</span>
+            <span class="lang-content" data-lang="en">A special program was organized at our school on the occasion of the Great Victory Day.</span>
+          </p>
+          <a href="#" class="inline-flex items-center text-black dark:text-white text-sm font-medium hover:underline">
+            <span class="lang-content active" data-lang="bn">বিস্তারিত দেখুন</span>
+            <span class="lang-content" data-lang="en">Read More</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center">
+      <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-black hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 button-glow">
+        <span class="lang-content active" data-lang="bn">আরও নোটিশ দেখুন</span>
+        <span class="lang-content" data-lang="en">Load More Notices</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-slide-up {
+      animation: slideUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .notice-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .notice-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .dark .notice-card:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .button-glow {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .button-glow:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .dark .button-glow:hover {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15), 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+  </style>
+
+  <script>
+    // Intersection Observer for scroll animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('notice-card')) {
+              entry.target.classList.add('animate-slide-up');
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements
+      document.querySelectorAll('.notice-card').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</section>
+
+  </main>
+
+  <!-- Container for the single floating button -->
+  <div class="fixed bottom-6 right-6 z-[99]">
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/1234567890" target="_blank" aria-label="Chat with us on WhatsApp" class="group relative flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl transition-all duration-300 transform active:scale-95 focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-700 magnetic animate-float-gentle">
+      
+      <!-- Ripple effect element -->
+      <div class="absolute inset-0 w-full h-full rounded-full bg-green-500 opacity-75 -z-10 animate-ripple"></div>
+      
+      <!-- WhatsApp SVG Icon -->
+      <svg class="w-8 h-8 md:w-9 md:h-9" viewBox="0 0 176 176">
+        <rect width="176" height="176" fill="#25D366" rx="24"></rect>
+        <g fill="#fff">
+          <path d="M126.8 49.2a54.57 54.57 0 0 0-87.42 63.13l-5.79 28.11a2.08 2.08 0 0 0 .33 1.63 2.11 2.11 0 0 0 2.24.87l27.55-6.53A54.56 54.56 0 0 0 126.8 49.2zm-8.59 68.56a42.74 42.74 0 0 1-49.22 8l-3.84-1.9-16.89 4 .05-.21 3.5-17-1.88-3.71a42.72 42.72 0 0 1 7.86-49.59 42.73 42.73 0 0 1 60.42 0 2.28 2.28 0 0 0 .22.22 42.72 42.72 0 0 1-.22 60.19z"></path>
+          <path d="M116.71 105.29c-2.07 3.26-5.34 7.25-9.45 8.24-7.2 1.74-18.25.06-32-12.76l-.17-.15C63 89.41 59.86 80.08 60.62 72.68c.42-4.2 3.92-8 6.87-10.48a3.93 3.93 0 0 1 6.15 1.41l4.45 10a3.91 3.91 0 0 1-.49 4l-2.25 2.92a3.87 3.87 0 0 0-.35 4.32c1.26 2.21 4.28 5.46 7.63 8.47 3.76 3.4 7.93 6.51 10.57 7.57a3.82 3.82 0 0 0 4.19-.88l2.61-2.63a4 4 0 0 1 3.9-1l10.57 3a4 4 0 0 1 2.24 5.91z"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-50 dark:bg-zinc-800 border-t border-neutral-100 dark:border-neutral-800 mt-auto transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+      <!-- Mobile Footer -->
+      <div class="block lg:hidden py-8 sm:py-10">
+        <!-- Brand Section -->
+        <div class="flex flex-col items-center mb-8 scroll-reveal">
+          <div class="flex items-center mb-2">
+            <div class="w-8 h-8 bg-black rounded-lg flex items-center justify-center mr-3 hover-glow">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <span class="text-black dark:text-white font-medium tracking-[-0.4px]">
+              <span class="lang-content active" data-lang="bn">আদর্শ <span class="font-semibold">উচ্চ বিদ্যালয়</span></span>
+              <span class="lang-content" data-lang="en">Adarsha <span class="font-semibold">High School</span></span>
+            </span>
+          </div>
+          <p class="text-neutral-600 dark:text-neutral-400 text-sm text-center">
+            <span class="lang-content active" data-lang="bn">শিক্ষায় আলো, জীবনে সাফল্য</span>
+            <span class="lang-content" data-lang="en">Light in Education, Success in Life</span>
+          </p>
+          <!-- Contact Info in Mobile Footer (before social icons) -->
+          <ul class="space-y-3 text-neutral-600 dark:text-neutral-400 text-sm mt-4 text-left w-full max-w-xs mx-auto">
+            <li>
+              <div class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>
+                  <span class="lang-content active" data-lang="bn">১২৩ শিক্ষা সড়ক, ঢাকা-১২০৫, বাংলাদেশ</span>
+                  <span class="lang-content" data-lang="en">123 Shikkha Road, Dhaka-1205, Bangladesh</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>
+                  <span class="lang-content active" data-lang="bn">০২-৯৮৭৬৫৪৩২, ০১৭১২-৩৪৫৬৭৮</span>
+                  <span class="lang-content" data-lang="en">02-98765432, 01712-345678</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>info@adarshahighschool.edu.bd</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 mb-8 scroll-reveal stagger-1">
+          <a href="#" aria-label="Facebook" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white social-icon magnetic">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white social-icon magnetic">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Email" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white social-icon magnetic">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+        </div>
+        <!-- Bottom Section -->
+        <div class="pt-6 border-t border-neutral-100 dark:border-neutral-700 scroll-reveal stagger-2">
+          <p class="text-neutral-500 dark:text-neutral-400 text-xs text-center mb-4">
+            <span class="lang-content active" data-lang="bn">© ২০২৫ আদর্শ উচ্চ বিদ্যালয়। সর্বস্বত্ব সংরক্ষিত।</span>
+            <span class="lang-content" data-lang="en">© 2025 Adarsha High School. All rights reserved.</span>
+          </p>
+          <div class="flex justify-center space-x-6">
+            <a href="#privacy" class="footer-link text-neutral-500 dark:text-neutral-400 text-xs magnetic">
+              <span class="lang-content active" data-lang="bn">গোপনীয়তা নীতি</span>
+              <span class="lang-content" data-lang="en">Privacy Policy</span>
+            </a>
+            <a href="#terms" class="footer-link text-neutral-500 dark:text-neutral-400 text-xs magnetic">
+              <span class="lang-content active" data-lang="bn">ব্যবহারের শর্তাবলী</span>
+              <span class="lang-content" data-lang="en">Terms of Use</span>
+            </a>
+            <a href="#sitemap" class="footer-link text-neutral-500 dark:text-neutral-400 text-xs magnetic">
+              <span class="lang-content active" data-lang="bn">সাইটম্যাপ</span>
+              <span class="lang-content" data-lang="en">Sitemap</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Footer -->
+      <div class="hidden lg:block py-12">
+        <div class="grid grid-cols-5 gap-8">
+          <!-- Column 1: Brand, Description, Contact Info, Social Icons -->
+          <div class="col-span-1 scroll-reveal-left stagger-1">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-black rounded-lg flex items-center justify-center mr-3 hover-glow">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <span class="text-black dark:text-white font-medium text-lg tracking-[-0.4px]">
+                <span class="lang-content active" data-lang="bn">আদর্শ <span class="font-semibold">উচ্চ বিদ্যালয়</span></span>
+                <span class="lang-content" data-lang="en">Adarsha <span class="font-semibold">High School</span></span>
+              </span>
+            </div>
+            <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-4">
+              <span class="lang-content active" data-lang="bn">আদর্শ উচ্চ বিদ্যালয় একটি ঐতিহ্যবাহী প্রতিষ্ঠান যা শিক্ষার্থীদের জ্ঞান, নৈতিকতা এবং সৃজনশীলতার বিকাশে প্রতিশ্রুতিবদ্ধ।</span>
+              <span class="lang-content" data-lang="en">Adarsha High School is a traditional institution committed to fostering knowledge, ethics, and creativity in students.</span>
+            </p>
+            <!-- Contact Info in First Column (before social icons) -->
+            <ul class="space-y-3 text-neutral-600 dark:text-neutral-400 text-sm mb-6">
+              <li>
+                <div class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>
+                    <span class="lang-content active" data-lang="bn">১২৩ শিক্ষা সড়ক, ঢাকা-১২০৫, বাংলাদেশ</span>
+                    <span class="lang-content" data-lang="en">123 Shikkha Road, Dhaka-1205, Bangladesh</span>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>
+                    <span class="lang-content active" data-lang="bn">০২-৯৮৭৬৫৪৩২, ০১৭১২-৩৪৫৬৭৮</span>
+                    <span class="lang-content" data-lang="en">02-98765432, 01712-345678</span>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span>info@adarshahighschool.edu.bd</span>
+                </div>
+              </li>
+            </ul>
+            <div class="flex space-x-4">
+              <a href="#" aria-label="Facebook" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white social-icon magnetic">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="YouTube" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white social-icon magnetic">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="Email" class="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white social-icon magnetic">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="scroll-reveal-left stagger-2">
+            <h3 class="text-neutral-900 dark:text-white text-base font-semibold mb-4">
+              <span class="lang-content active" data-lang="bn">দ্রুত লিংক</span>
+              <span class="lang-content" data-lang="en">Quick Links</span>
+            </h3>
+            <ul class="space-y-3">
+              <li><a href="#home" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">হোম</span> <span class="lang-content" data-lang="en">Home</span> </a></li>
+              <li><a href="#about" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">প্রতিষ্ঠান পরিচিতি</span> <span class="lang-content" data-lang="en">About</span> </a></li>
+              <li><a href="#teachers" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">শিক্ষকমণ্ডলী</span> <span class="lang-content" data-lang="en">Teachers</span> </a></li>
+              <li><a href="#students" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">শিক্ষার্থী তথ্য</span> <span class="lang-content" data-lang="en">Students</span> </a></li>
+              <li><a href="#contact" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">যোগাযোগ</span> <span class="lang-content" data-lang="en">Contact</span> </a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Academic -->
+          <div class="scroll-reveal-left stagger-3">
+            <h3 class="text-neutral-900 dark:text-white text-base font-semibold mb-4">
+              <span class="lang-content active" data-lang="bn">একাডেমিক</span>
+              <span class="lang-content" data-lang="en">Academic</span>
+            </h3>
+            <ul class="space-y-3">
+              <li><a href="#admission-info" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">ভর্তি তথ্য</span> <span class="lang-content" data-lang="en">Admission Info</span> </a></li>
+              <li><a href="#exam-results" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">পরীক্ষার ফলাফল</span> <span class="lang-content" data-lang="en">Exam Results</span> </a></li>
+              <li><a href="#syllabus" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">সিলেবাস</span> <span class="lang-content" data-lang="en">Syllabus</span> </a></li>
+              <li><a href="#class-routine" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">ক্লাস রুটিন</span> <span class="lang-content" data-lang="en">Class Routine</span> </a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Information -->
+          <div class="scroll-reveal-left stagger-4">
+            <h3 class="text-neutral-900 dark:text-white text-base font-semibold mb-4">
+              <span class="lang-content active" data-lang="bn">তথ্য</span>
+              <span class="lang-content" data-lang="en">Information</span>
+            </h3>
+            <ul class="space-y-3">
+              <li><a href="#notice-board" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">নোটিশ বোর্ড</span> <span class="lang-content" data-lang="en">Notice Board</span> </a></li>
+              <li><a href="#academic-calendar" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">একাডেমিক ক্যালেন্ডার</span> <span class="lang-content" data-lang="en">Academic Calendar</span> </a></li>
+              <li><a href="#events" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">অনুষ্ঠান</span> <span class="lang-content" data-lang="en">Events</span> </a></li>
+              <li><a href="#photo-gallery" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">ফটো গ্যালারি</span> <span class="lang-content" data-lang="en">Photo Gallery</span> </a></li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Resources -->
+          <div class="scroll-reveal-left stagger-5">
+            <h3 class="text-neutral-900 dark:text-white text-base font-semibold mb-4">
+              <span class="lang-content active" data-lang="bn">রিসোর্স</span>
+              <span class="lang-content" data-lang="en">Resources</span>
+            </h3>
+            <ul class="space-y-3">
+              <li><a href="#library-section" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">লাইব্রেরি</span> <span class="lang-content" data-lang="en">Library</span> </a></li>
+              <li><a href="#laboratory-section" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">ল্যাবরেটরি</span> <span class="lang-content" data-lang="en">Laboratory</span> </a></li>
+              <li><a href="#sports" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">খেলাধুলা</span> <span class="lang-content" data-lang="en">Sports</span> </a></li>
+              <li><a href="#downloads" class="footer-link text-neutral-600 dark:text-neutral-400 text-sm magnetic"> <span class="lang-content active" data-lang="bn">ডাউনলোড</span> <span class="lang-content" data-lang="en">Downloads</span> </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 mt-8 border-t border-neutral-100 dark:border-neutral-700 text-center scroll-reveal stagger-6">
+          <p class="text-neutral-500 dark:text-neutral-400 text-sm">
+            <span class="lang-content active" data-lang="bn">© ২০২৫ আদর্শ উচ্চ বিদ্যালয়। সর্বস্বত্ব সংরক্ষিত।</span>
+            <span class="lang-content" data-lang="en">© 2025 Adarsha High School. All rights reserved.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Enhanced JavaScript with all animations and effects
+    
+    // Loading Screen Management
+    document.addEventListener('DOMContentLoaded', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      const body = document.body;
+      
+      // Hide loading screen after 2.5 seconds
+      setTimeout(() => {
+        loadingScreen.classList.add('fade-out');
+        body.style.overflow = 'visible';
+        
+        // Initialize all animations after loading
+        initializeAnimations();
+      }, 2500);
+    });
+
+    // Custom Cursor Effects
+    document.addEventListener('DOMContentLoaded', () => {
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+      
+      if (cursorDot && cursorOutline) {
+        document.addEventListener('mousemove', (e) => {
+          const posX = e.clientX;
+          const posY = e.clientY;
+          
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
+          
+          cursorOutline.style.left = `${posX}px`;
+          cursorOutline.style.top = `${posY}px`;
+        });
+
+        // Add hover effects for interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .magnetic');
+        
+        interactiveElements.forEach(el => {
+          el.addEventListener('mouseenter', () => {
+            cursorDot.style.transform = 'scale(2)';
+            cursorOutline.style.transform = 'scale(1.5)';
+          });
+          
+          el.addEventListener('mouseleave', () => {
+            cursorDot.style.transform = 'scale(1)';
+            cursorOutline.style.transform = 'scale(1)';
+          });
+        });
+      }
+    });
+
+    // Magnetic Effect for Interactive Elements
+    document.addEventListener('DOMContentLoaded', () => {
+      const magneticElements = document.querySelectorAll('.magnetic');
+      
+      magneticElements.forEach(element => {
+        element.addEventListener('mousemove', (e) => {
+          const rect = element.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          
+          element.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        });
+        
+        element.addEventListener('mouseleave', () => {
+          element.style.transform = 'translate(0px, 0px)';
+        });
+      });
+    });
+
+    // Scroll Reveal Animations
+    function initializeScrollReveal() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      }, observerOptions);
+
+      // Observe all scroll reveal elements
+      const scrollElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale');
+      scrollElements.forEach(el => observer.observe(el));
+    }
+
+    // Counter Animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const increment = target / 100;
+        let current = 0;
+        
+        const updateCounter = () => {
+          if (current < target) {
+            current += increment;
+            const isEnglish = counter.querySelector('.lang-content:not(.active)');
+            if (isEnglish && isEnglish.getAttribute('data-lang') === 'en') {
+              counter.querySelector('.lang-content.active').textContent = Math.ceil(current) + '+';
+            } else {
+              // Bengali numbers conversion would go here if needed
+              counter.querySelector('.lang-content.active').textContent = Math.ceil(current) + '+';
+            }
+            requestAnimationFrame(updateCounter);
+          } else {
+            if (counter.querySelector('.lang-content.active').getAttribute('data-lang') === 'bn') {
+              counter.querySelector('.lang-content.active').textContent = target + '+';
+            } else {
+              counter.querySelector('.lang-content.active').textContent = target + '+';
+            }
+          }
+        };
+        
+        // Start counter when element is visible
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              updateCounter();
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+        
+        observer.observe(counter);
+      });
+    }
+
+    // Tilt Card Effect
+    function initializeTiltCards() {
+      const tiltCards = document.querySelectorAll('.tilt-card');
+      
+      tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          const rotateX = (y - centerY) / 10;
+          const rotateY = (centerX - x) / 10;
+          
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+      });
+    }
+
+    // Parallax Effect
+    function initializeParallax() {
+      const parallaxElements = document.querySelectorAll('.parallax-element');
+      
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        
+        parallaxElements.forEach(element => {
+          const rate = scrolled * -0.5;
+          element.style.transform = `translateY(${rate}px)`;
+        });
+      });
+    }
+
+    // Initialize all animations
+    function initializeAnimations() {
+      initializeScrollReveal();
+      animateCounters();
+      initializeTiltCards();
+      initializeParallax();
+    }
+
+    // Language switching functionality
+    function switchLanguage(lang) {
+      document.querySelectorAll('.lang-content').forEach(element => {
+        if (element.dataset.lang === lang) {
+          element.classList.add('active');
+        } else {
+          element.classList.remove('active');
+        }
+      });
+      document.querySelectorAll('.lang-btn').forEach(button => {
+        if (button.dataset.lang === lang) {
+          button.classList.add('active');
+        } else {
+          button.classList.remove('active');
+        }
+      });
+      localStorage.setItem('selectedLanguage', lang);
+    }
+
+    // Load saved language preference on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('selectedLanguage') || 'bn';
+      switchLanguage(savedLang);
+
+      // Mobile menu toggle
+      const openMobileMenuButton = document.getElementById('openMobileMenu');
+      const closeMobileMenuButton = document.getElementById('closeMobileMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileNavLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+
+      function openMenu() {
+        mobileMenu.classList.add('open');
+        mobileMenuOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        mobileMenuOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      openMobileMenuButton.addEventListener('click', openMenu);
+      closeMobileMenuButton.addEventListener('click', closeMenu);
+      mobileMenuOverlay.addEventListener('click', closeMenu);
+
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const targetId = event.currentTarget.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+          closeMenu();
+        });
+      });
+
+      // Mobile Dropdown Toggle Logic
+      document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const targetId = button.dataset.target;
+          const targetContent = document.getElementById(targetId);
+          const arrowIcon = button.querySelector('.mobile-dropdown-arrow');
+
+          if (targetContent && arrowIcon) {
+            targetContent.classList.toggle('open');
+            arrowIcon.classList.toggle('rotate');
+          }
+        });
+      });
+
+      // Navbar scroll behavior
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          if (scrollTop > lastScrollTop && scrollTop > 50) {
+            navbar.classList.add('scrolled');
+          } else if (scrollTop === 0) {
+            navbar.classList.remove('scrolled');
+          }
+          lastScrollTop = scrollTop;
+        });
+      }
+
+      // Theme switch functionality
+      const themeSwitch = document.getElementById('themeSwitch');
+      const htmlRoot = document.getElementById('html-root');
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        htmlRoot.classList.add('dark');
+        themeSwitch.classList.add('dark');
+      } else {
+        htmlRoot.classList.remove('dark');
+        themeSwitch.classList.remove('dark');
+      }
+
+      themeSwitch.addEventListener('click', () => {
+        htmlRoot.classList.toggle('dark');
+        themeSwitch.classList.toggle('dark');
+        if (htmlRoot.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+
+      // Desktop Dropdown Hover Logic
+      const desktopDropdowns = document.querySelectorAll('.dropdown[data-dropdown-id]');
+      const dropdownTimeouts = new Map();
+
+      desktopDropdowns.forEach(dropdown => {
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+        dropdown.addEventListener('mouseenter', () => {
+          if (dropdownTimeouts.has(dropdown)) {
+            clearTimeout(dropdownTimeouts.get(dropdown));
+            dropdownTimeouts.delete(dropdown);
+          }
+          desktopDropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown) {
+              const otherDropdownContent = otherDropdown.querySelector('.dropdown-content');
+              if (otherDropdownContent.classList.contains('show')) {
+                otherDropdownContent.classList.remove('show');
+                if (dropdownTimeouts.has(otherDropdown)) {
+                  clearTimeout(dropdownTimeouts.get(otherDropdown));
+                  dropdownTimeouts.delete(otherDropdown);
+                }
+              }
+            }
+          });
+          dropdownContent.classList.add('show');
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+          const timeoutId = setTimeout(() => {
+            dropdownContent.classList.remove('show');
+            dropdownTimeouts.delete(dropdown);
+          }, 200);
+          dropdownTimeouts.set(dropdown, timeoutId);
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+          if (dropdownTimeouts.has(dropdown)) {
+            clearTimeout(dropdownTimeouts.get(dropdown));
+            dropdownTimeouts.delete(dropdown);
+          }
+        });
+      });
+    });
+
+    // Parallax effect for background image
+    document.addEventListener('DOMContentLoaded', () => {
+      const parallaxBg = document.querySelector('.parallax-bg');
+      if (parallaxBg) {
+        window.addEventListener('scroll', () => {
+          const scrollPosition = window.pageYOffset;
+          parallaxBg.style.backgroundPositionY = -scrollPosition * 0.1 + 'px';
+        });
+      }
+    });
+
+    // Mouse-move parallax for the hero image
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroImageContainer = document.querySelector('.hero-image-container');
+      if (heroImageContainer) {
+        heroImageContainer.addEventListener('mousemove', (e) => {
+          const rect = heroImageContainer.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          const mouseX = e.clientX;
+          const mouseY = e.clientY;
+
+          const offsetX = (mouseX - centerX) / centerX;
+          const offsetY = (mouseY - centerY) / centerY;
+
+          const rotateY = offsetX * 5;
+          const rotateX = -offsetY * 5;
+          const translateX = offsetX * 10;
+          const translateY = offsetY * 10;
+
+          heroImageContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${translateX}px) translateY(${translateY}px)`;
+        });
+
+        heroImageContainer.addEventListener('mouseleave', () => {
+          heroImageContainer.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0px) translateY(0px)`;
+        });
+      }
+    });
+
+    // Carousel functionality
+    document.addEventListener('DOMContentLoaded', () => {
+      const carouselSlides = document.querySelector('.carousel-slides');
+      const dotsContainer = document.querySelector('.carousel-dots');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = [];
+      let currentIndex = 0;
+      let slideInterval;
+
+      if (carouselSlides && dotsContainer && slides.length > 0) {
+        // Create dots
+        slides.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.classList.add('dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => showSlide(index));
+          dotsContainer.appendChild(dot);
+          dots.push(dot);
+        });
+
+        function showSlide(index) {
+          if (index < 0) {
+            currentIndex = slides.length - 1;
+          } else if (index >= slides.length) {
+            currentIndex = 0;
+          } else {
+            currentIndex = index;
+          }
+
+          const offset = -currentIndex * 100;
+          carouselSlides.style.transform = `translateX(${offset}%)`;
+
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+          });
+        }
+
+        function nextSlide() {
+          showSlide(currentIndex + 1);
+        }
+
+        function startAutoSlide() {
+          slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoSlide() {
+          clearInterval(slideInterval);
+        }
+
+        startAutoSlide();
+
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+          carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+          carouselContainer.addEventListener('mouseleave', startAutoSlide);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
